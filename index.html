@@ -13,6 +13,9 @@
   <meta property="og:image" content="assets/gustavo_brasil_hero.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="assets/gustavo_brasil_cutout.png" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/hero_bg.jpg" fetchpriority="high">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cinzel:wght@500;600;700;800&display=swap" rel="stylesheet">
   <script type="application/ld+json">
   {
@@ -1259,6 +1262,114 @@
       gap: 18px;
     }
 
+    .workflow-note {
+      font-size: 0.82rem;
+      color: var(--text-light-muted);
+    }
+
+    .wf-check {
+      color: var(--status-online);
+    }
+
+    .workflow-footer-note {
+      font-size: 0.86rem;
+      color: var(--text-light-secondary);
+    }
+
+    .workflow-mail-link {
+      font-size: 0.86rem;
+      color: var(--gold-on-dark);
+      text-decoration: underline;
+    }
+
+    .training-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .tf-title {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+    }
+
+    .tf-sub {
+      font-size: 0.9rem;
+      color: var(--text-light-muted);
+    }
+
+    .tf-notice {
+      background: rgba(197, 168, 128, 0.12);
+      border: 1px solid var(--border-gold-subtle);
+      padding: 14px 18px;
+      border-radius: var(--radius-sm);
+      font-size: 0.84rem;
+      color: var(--gold-on-dark);
+    }
+
+    .centered-lead {
+      margin: 0 auto;
+    }
+
+    .crm-funnel-value {
+      color: #FFFFFF;
+    }
+
+    .crm-caption {
+      font-size: 0.74rem;
+      color: var(--text-light-muted);
+    }
+
+    .decision-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-locale {
+      margin-top: 16px;
+      font-size: 0.84rem;
+      color: var(--gold-on-dark);
+    }
+
+    .footer-note {
+      font-size: 0.84rem;
+      color: var(--text-light-muted);
+      margin-bottom: 12px;
+    }
+
+    .footer-mail-wrap {
+      margin-top: 18px;
+      font-size: 0.8rem;
+    }
+
+    .footer-tel {
+      color: var(--text-light-muted);
+    }
+
+    .footer-mail-link {
+      color: var(--gold-on-dark);
+    }
+
+    .plan-cta-full {
+      width: 100%;
+      border-color: var(--gold-on-dark);
+      color: var(--gold-on-dark);
+    }
+
+    .crm-alert {
+      margin-top: 14px;
+      font-size: 0.76rem;
+      color: var(--gold-on-dark);
+    }
+
+    .crm-plans-cta {
+      margin-top: 18px;
+    }
+
     /* SECTION 02: FORMAÇÃO 123 PERITO */
     .section-training {
       padding: clamp(70px, 9vw, 120px) 0;
@@ -1835,8 +1946,14 @@
     }
 
     .faq-item.active .faq-answer-panel {
-      max-height: 400px;
+      max-height: 800px;
       padding-bottom: 24px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .faq-answer-panel {
+        transition: none;
+      }
     }
 
     .faq-answer-text {
@@ -2671,7 +2788,7 @@
 
         <div class="hero-visual-col">
           <div class="hero-portrait-frame">
-            <img src="assets/gustavo_brasil_cutout.png" alt="Dr. Gustavo Brasil vestindo terno risca de giz e gravata dourada" class="hero-portrait-img">
+            <img src="assets/gustavo_brasil_cutout.png" alt="Dr. Gustavo Brasil vestindo terno risca de giz e gravata dourada" class="hero-portrait-img" fetchpriority="high" decoding="async" width="440" height="560">
             <div class="hero-portrait-tag">
               <div class="tag-title">Gustavo Brasil</div>
               <div class="tag-sub">Perito Judicial · Advogado · Professor</div>
@@ -2689,7 +2806,7 @@
           <!-- Card 1: Grafotécnica Brasileira -->
           <article class="ribbon-card">
             <div class="card-media">
-              <img src="assets/card_grafotecnica.jpg" alt="Exame pericial grafotécnico em contrato de prestação de serviços com selo notarial de São Paulo sob lupa de precisão">
+              <img src="assets/card_grafotecnica.jpg" alt="Exame pericial grafotécnico em contrato de prestação de serviços com selo notarial de São Paulo sob lupa de precisão" loading="lazy" decoding="async" width="640" height="400">
               <div class="card-icon-badge" aria-hidden="true">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
               </div>
@@ -2704,7 +2821,7 @@
           <!-- Card 2: Palácio da Justiça do Brasil -->
           <article class="ribbon-card">
             <div class="card-media">
-              <img src="assets/card_tribunal.jpg" alt="Fachada monumental do Palácio da Justiça com a bandeira do Brasil e colunas neoclássicas">
+              <img src="assets/card_tribunal.jpg" alt="Fachada monumental do Palácio da Justiça com a bandeira do Brasil e colunas neoclássicas" loading="lazy" decoding="async" width="640" height="400">
               <div class="card-icon-badge" aria-hidden="true">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
               </div>
@@ -2719,7 +2836,7 @@
           <!-- Card 3: Lady Justice com Balança Dourada -->
           <article class="ribbon-card">
             <div class="card-media">
-              <img src="assets/card_justitia.jpg" alt="Estátua clássica da Justiça com balança de latão dourado em gabinete jurídico">
+              <img src="assets/card_justitia.jpg" alt="Estátua clássica da Justiça com balança de latão dourado em gabinete jurídico" loading="lazy" decoding="async" width="640" height="400">
               <div class="card-icon-badge" aria-hidden="true">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18"/><path d="M3 7l9-4 9 4"/><path d="M6 10l-3 6h6l-3-6z"/><path d="M18 10l-3 6h6l-3-6z"/></svg>
               </div>
@@ -2797,7 +2914,7 @@
             <div class="mosaic-decor-tile-4" aria-hidden="true"></div>
 
             <div class="mosaic-main-img">
-              <img src="assets/gustavo_brasil_microscopio.jpg" alt="Dr. Gustavo Brasil examinando documento sob estereomicroscópio com a balança da justiça e livros forenses na mesa">
+              <img src="assets/gustavo_brasil_microscopio.jpg" alt="Dr. Gustavo Brasil examinando documento sob estereomicroscópio com a balança da justiça e livros forenses na mesa" loading="lazy" decoding="async" width="800" height="600">
             </div>
 
             <!-- Dark Quote Box directly mirroring the reference design -->
@@ -2816,19 +2933,19 @@
       <div class="container">
         <div class="stats-grid">
           <div class="stat-item">
-            <div class="stat-number">18+</div>
+            <div class="stat-number" aria-label="18 anos ou mais">18+</div>
             <div class="stat-label">Anos de Perícia Judicial</div>
           </div>
           <div class="stat-item">
-            <div class="stat-number">3.000+</div>
+            <div class="stat-number" aria-label="3000 laudos ou mais">3.000+</div>
             <div class="stat-label">Laudos Produzidos</div>
           </div>
           <div class="stat-item">
-            <div class="stat-number">1.000+</div>
+            <div class="stat-number" aria-label="1000 alunos ou mais">1.000+</div>
             <div class="stat-label">Alunos e Peritos Formados</div>
           </div>
           <div class="stat-item">
-            <div class="stat-number">BR</div>
+            <div class="stat-number" aria-label="Atendimento em todo o Brasil">BR</div>
             <div class="stat-label">Atendimento Nacional (12 UFs)</div>
           </div>
         </div>
@@ -2929,7 +3046,7 @@
               <div class="kicker dark-mode">Jornada Transparente</div>
               <h3>Como funciona a atuação pericial</h3>
             </div>
-            <span style="font-size: 0.82rem; color: var(--text-light-muted);">Verificação de conflito de interesses em todos os casos.</span>
+            <span class="workflow-note">Verificação de conflito de interesses em todos os casos.</span>
           </div>
 
           <div class="workflow-steps-grid">
@@ -2952,17 +3069,17 @@
             </div>
 
             <div class="wf-step">
-              <div class="wf-num">04 <span class="wf-num-arrow" style="color:#10B981;" aria-hidden="true">✓</span></div>
+              <div class="wf-num">04 <span class="wf-num-arrow wf-check" aria-hidden="true">✓</span></div>
               <div class="wf-title">Impugnação se preciso</div>
               <div class="wf-desc">Desconstrução pontual de laudos judiciais desfavoráveis que apresentem falhas metodológicas.</div>
             </div>
           </div>
 
           <div class="workflow-footer">
-            <span style="font-size: 0.86rem; color: var(--text-light-secondary);">
+            <span class="workflow-footer-note">
               Atendimento nacional: remoto com segurança cibernética e presencial quando necessário.
             </span>
-            <a href="mailto:contato@advgustavobrasil.com.br" style="font-size: 0.86rem; color: var(--gold-on-dark); text-decoration: underline;" aria-label="Enviar e-mail para contato@advgustavobrasil.com.br">
+            <a href="mailto:contato@advgustavobrasil.com.br" class="workflow-mail-link" aria-label="Enviar e-mail para contato@advgustavobrasil.com.br">
               Prefere e-mail? contato@advgustavobrasil.com.br
             </a>
           </div>
@@ -2990,7 +3107,7 @@
             <span class="curriculum-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Comunidade Nacional</span>
           </div>
 
-          <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px;">
+          <div class="training-actions">
             <a href="https://gustavobrasil5.hotmart.host/pagina-de-vendas-6e0d3631-c30b-48cf-b9fa-ed235b8c39d4" target="_blank" rel="noopener noreferrer" class="btn-gold" aria-label="Garantir vaga na Formação 123 Perito na Hotmart (abre em nova janela)">
               Garantir vaga na Formação 123 Perito →
             </a>
@@ -3003,8 +3120,8 @@
         <div class="training-card-col">
           <div class="training-features-card">
             <span class="tf-badge">123 PERITO · PROGRAMA COMPLETO</span>
-            <h3 style="font-family: var(--font-display); font-size: 1.5rem; color: #FFFFFF; margin-bottom: 8px;">Início e Recorrência de Honorários</h3>
-            <p style="font-size: 0.9rem; color: var(--text-light-muted);">Judicial e extrajudicial. Como captar bancas de advocacia, precificar com segurança, laudar com precisão e ser nomeado com frequência.</p>
+            <h3 class="tf-title">Início e Recorrência de Honorários</h3>
+            <p class="tf-sub">Judicial e extrajudicial. Como captar bancas de advocacia, precificar com segurança, laudar com precisão e ser nomeado com frequência.</p>
 
             <ul class="tf-list">
               <li>
@@ -3025,7 +3142,7 @@
               </li>
             </ul>
 
-            <div style="background: rgba(197, 168, 128, 0.12); border: 1px solid var(--border-gold-subtle); padding: 14px 18px; border-radius: var(--radius-sm); font-size: 0.84rem; color: var(--gold-on-dark);">
+            <div class="tf-notice">
               💡 Turmas com vagas limitadas para garantir o acompanhamento individualizado de cada aluno.
             </div>
           </div>
@@ -3039,7 +3156,7 @@
         <div class="platform-header">
           <div class="kicker dark-mode">03 · Plataforma de Gestão Forense</div>
           <h2 id="platform-heading">Casos, agenda e honorários em ordem.</h2>
-          <p class="hero-lead" style="margin: 0 auto;">
+          <p class="hero-lead centered-lead">
             CRM completo, controle rigoroso de prazos, custódia de documentos e recebimento de honorários. Prospecção organizada junto a escritórios sem planilhas improvisadas.
           </p>
         </div>
@@ -3067,18 +3184,18 @@
               </div>
               <div class="crm-funnel-row">
                 <span>Prospecção Ativa</span>
-                <strong style="color:#FFFFFF;">7</strong>
+                <strong class="crm-funnel-value">7</strong>
               </div>
               <div class="crm-funnel-row">
                 <span>Propostas Enviadas</span>
-                <strong style="color:#FFFFFF;">4</strong>
+                <strong class="crm-funnel-value">4</strong>
               </div>
               <div class="crm-funnel-row">
                 <span>Em Andamento</span>
-                <strong style="color:#FFFFFF;">3</strong>
+                <strong class="crm-funnel-value">3</strong>
               </div>
               <div class="crm-stat-highlight">R$ 48.720,00</div>
-              <span style="font-size: 0.74rem; color: var(--text-light-muted);">Faturamento em carteira no mês vigente.</span>
+              <span class="crm-caption">Faturamento em carteira no mês vigente.</span>
             </div>
 
             <!-- Panel 2: Agenda de Diligências -->
@@ -3102,7 +3219,7 @@
                 <div class="agenda-desc">Alinhamento Advogado ●</div>
                 <span class="agenda-status-dot" style="background:#3B82F6;" aria-hidden="true"></span>
               </div>
-              <div style="margin-top: 14px; font-size: 0.76rem; color: var(--gold-on-dark);">
+              <div class="crm-alert">
                 ⏰ Alertas automáticos via WhatsApp e E-mail
               </div>
             </div>
@@ -3138,8 +3255,8 @@
                 <div class="leads-progress" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" aria-label="Escritórios OAB/RJ cadastrados"><div class="leads-fill" style="width: 50%;"></div></div>
               </div>
 
-              <div style="margin-top: 18px;">
-                <a href="https://123perito.com.br/planos" target="_blank" rel="noopener noreferrer" class="btn-outline-gold" style="width:100%; border-color: var(--gold-on-dark); color: var(--gold-on-dark);" aria-label="Ver planos oficiais da plataforma 123 Perito (abre em nova janela)">
+              <div class="crm-plans-cta">
+                <a href="https://123perito.com.br/planos" target="_blank" rel="noopener noreferrer" class="btn-outline-gold plan-cta-full" aria-label="Ver planos oficiais da plataforma 123 Perito (abre em nova janela)">
                   Ver Planos Oficiais (a partir de R$ 9,90) →
                 </a>
               </div>
@@ -3303,8 +3420,8 @@
 
         <div class="faq-accordion-list">
           
-          <div class="faq-item active">
-            <button type="button" class="faq-question-btn" id="faq-btn-1" aria-expanded="true" aria-controls="faq-panel-1">
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" id="faq-btn-1" aria-expanded="false" aria-controls="faq-panel-1">
               <span>O que faz um perito judicial em grafotécnica e documentoscopia?</span>
               <svg class="faq-icon-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
@@ -3397,7 +3514,7 @@
             <p class="decision-desc">
               Conheça o Programa 123 Perito e a plataforma de gestão. A trilha comprovada para ser nomeado nos tribunais, precificar com segurança e captar bancas de advocacia com alta recorrência.
             </p>
-            <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div class="decision-actions">
               <a href="https://gustavobrasil5.hotmart.host/pagina-de-vendas-6e0d3631-c30b-48cf-b9fa-ed235b8c39d4" target="_blank" rel="noopener noreferrer" class="btn-gold" aria-label="Inscrever-se na Formação 123 Perito na Hotmart (abre em nova janela)">
                 Inscrever-se na Formação na Hotmart ↗
               </a>
@@ -3424,7 +3541,7 @@
           <p>
             Rigor científico, segurança digital e inteligência jurídica a serviço da prova material nos tribunais do Brasil.
           </p>
-          <div style="margin-top: 16px; font-size: 0.84rem; color: var(--gold-on-dark);">
+          <div class="footer-locale">
             📍 Uberlândia-MG · Atendimento Nacional
           </div>
         </div>
@@ -3454,7 +3571,7 @@
 
         <div class="footer-col">
           <h5>Notas Técnicas</h5>
-          <p style="font-size: 0.84rem; color: var(--text-light-muted); margin-bottom: 12px;">
+          <p class="footer-note">
             Análises exclusivas de jurisprudência pericial e casos práticos, sem spam.
           </p>
           <form id="newsletter-form" class="newsletter-form" novalidate>
@@ -3465,11 +3582,11 @@
             </div>
             <div id="newsletter-feedback" class="newsletter-feedback" role="status" aria-live="polite"></div>
           </form>
-          <div style="margin-top: 18px; font-size: 0.8rem;">
-            <a href="mailto:contato@advgustavobrasil.com.br" style="color: var(--gold-on-dark);">
+          <div class="footer-mail-wrap">
+            <a href="mailto:contato@advgustavobrasil.com.br" class="footer-mail-link">
               contato@advgustavobrasil.com.br
             </a><br>
-            <span style="color: var(--text-light-muted);">Tel: (34) 99194-8659</span>
+            <span class="footer-tel">Tel: (34) 99194-8659</span>
           </div>
         </div>
 
@@ -3573,8 +3690,14 @@
         });
       }
 
-      // 3. COUNTER HELPER FUNCTION
+      // 3. COUNTER HELPER FUNCTION (respeita prefers-reduced-motion)
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       function animateCount(elem, start, end, duration, suffix = '', formatThousands = false) {
+        if (prefersReducedMotion) {
+          const finalFormatted = formatThousands ? end.toLocaleString('pt-BR') : end;
+          elem.textContent = finalFormatted + suffix;
+          return;
+        }
         let startTime = null;
         function step(timestamp) {
           if (!startTime) startTime = timestamp;

@@ -1,0 +1,52 @@
+{
+  "$meta": {
+    "name": "lp-gustavo-brasil",
+    "version": "2.3.0",
+    "source": "DESIGN.md + index.html :root",
+    "wcag": "2.2 AAA"
+  },
+  "color": {
+    "primitive": {
+      "navy-950": { "$value": "#05080E", "$type": "color" },
+      "navy-900": { "$value": "#080D14", "$type": "color" },
+      "navy-800": { "$value": "#0E1622", "$type": "color" },
+      "navy-700": { "$value": "#141F2E", "$type": "color" },
+      "alabaster-50": { "$value": "#FAF8F5", "$type": "color" },
+      "alabaster-100": { "$value": "#FBF9F5", "$type": "color" },
+      "alabaster-200": { "$value": "#F3EFE6", "$type": "color" },
+      "gold-light": { "$value": "#DFC5A2", "$type": "color" },
+      "gold-main": { "$value": "#C5A880", "$type": "color" },
+      "gold-deep": { "$value": "#78531C", "$type": "color" },
+      "green-live": { "$value": "#10B981", "$type": "color" },
+      "red-error": { "$value": "#EF4444", "$type": "color" }
+    },
+    "semantic": {
+      "bg-canvas-dark": { "$value": "{color.primitive.navy-900}", "$type": "color" },
+      "bg-canvas-light": { "$value": "{color.primitive.alabaster-100}", "$type": "color" },
+      "text-primary-on-dark": { "$value": "{color.primitive.alabaster-50}", "$type": "color" },
+      "text-primary-on-light": { "$value": "{color.primitive.navy-800}", "$type": "color" },
+      "focus-ring-dark": { "$value": "{color.primitive.gold-light}", "$type": "color" },
+      "focus-ring-light": { "$value": "{color.primitive.gold-deep}", "$type": "color" }
+    }
+  },
+  "typography": {
+    "font-display": { "$value": "'Cinzel', 'Cormorant Garamond', Georgia, serif", "$type": "fontFamily" },
+    "font-editorial": { "$value": "'Cormorant Garamond', Georgia, serif", "$type": "fontFamily" },
+    "font-body": { "$value": "'Plus Jakarta Sans', system-ui, sans-serif", "$type": "fontFamily" }
+  },
+  "spacing": {
+    "xs": { "$value": "4px", "$type": "dimension" },
+    "sm": { "$value": "8px", "$type": "dimension" },
+    "md": { "$value": "16px", "$type": "dimension" },
+    "lg": { "$value": "24px", "$type": "dimension" },
+    "xl": { "$value": "32px", "$type": "dimension" },
+    "2xl": { "$value": "48px", "$type": "dimension" },
+    "3xl": { "$value": "64px", "$type": "dimension" }
+  },
+  "radius": {
+    "sm": { "$value": "4px", "$type": "dimension" },
+    "md": { "$value": "8px", "$type": "dimension" },
+    "lg": { "$value": "16px", "$type": "dimension" },
+    "full": { "$value": "9999px", "$type": "dimension" }
+  }
+}
