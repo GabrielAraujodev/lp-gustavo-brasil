@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://advgustavobrasil.com.br/sitemap.xml

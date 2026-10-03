@@ -1,0 +1,3609 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dr. Gustavo Brasil — Perícia Judicial · Direito · Tecnologia</title>
+  <meta name="description" content="Perito Judicial há 18 anos e mais de 3.000 laudos. Assistência técnica em grafotécnica, documentoscopia digital, geolocalização, IP e biometria para advogados que não podem correr risco com a prova.">
+  <meta name="theme-color" content="#080D14">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Dr. Gustavo Brasil — O Laudo que Sustenta a sua Tese em Juízo">
+  <meta property="og:description" content="Assistência técnica em grafotécnica, documentoscopia digital, geolocalização, IP e biometria facial. Quesitos precisos, parecer fundamentado e impugnação consistente.">
+  <meta property="og:image" content="assets/gustavo_brasil_hero.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cinzel:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "Dr. Gustavo Brasil — Perícia Judicial e Assistência Técnica",
+    "image": "assets/gustavo_brasil_hero.png",
+    "telephone": "+5534991948659",
+    "email": "contato@advgustavobrasil.com.br",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Uberlândia",
+      "addressRegion": "MG",
+      "addressCountry": "BR"
+    },
+    "description": "Assistência técnica pericial em grafotécnica, documentoscopia digital, geolocalização, IP e biometria facial para processos judiciais e extrajudiciais.",
+    "founder": {
+      "@type": "Person",
+      "name": "Gustavo Brasil",
+      "jobTitle": "Perito Judicial e Advogado",
+      "alumniOf": "OAB/MG"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "O que faz um perito judicial em grafotécnica?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Verifica a autenticidade de assinaturas e documentos, detecta falsificações, enxertos, decálquios e montagens digitais, emitindo pareceres e laudos técnicos conclusivos para processos judiciais e extrajudiciais."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como contratar assistência técnica pericial para meu processo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Basta enviar cópia das peças processuais e dos documentos questionados para uma análise preliminar de viabilidade e verificação de inexistência de conflito de interesses. Definida a viabilidade, alinhamos os quesitos e honorários."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quanto tempo leva a elaboração de um laudo ou parecer técnico?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Quesitos preliminares e manifestações de urgência são emitidos com prioridade imediata (em até 24 a 48 horas úteis). Pareceres técnicos completos e impugnações aprofundadas seguem os prazos judiciais acordados com o patrono da causa."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      /* Dark Realm (Hero & Statement) */
+      --bg-dark: #080D14;
+      --bg-dark-surface: #0E1622;
+      --bg-dark-elevated: #141F2E;
+      --border-dark: rgba(255, 255, 255, 0.12);
+      --border-gold-subtle: rgba(197, 168, 128, 0.35);
+      
+      /* Light Realm (Body - Warm Alabaster / Editorial Luxury) */
+      --bg-light: #FBF9F5;
+      --bg-light-surface: #FFFFFF;
+      --bg-light-subtle: #F3EFE6;
+      --bg-light-contrast: #EAE5D8;
+      --border-light: rgba(15, 23, 34, 0.12);
+      --border-light-strong: rgba(15, 23, 34, 0.22);
+
+      /* High-contrast Typography colors (WCAG AAA Compliance) */
+      --text-dark-primary: #0F1722;      /* Contrast > 16:1 on light */
+      --text-dark-secondary: #334155;    /* Contrast > 7.5:1 on light */
+      --text-dark-muted: #475569;        /* Contrast > 5.2:1 on light (WCAG AA pass) */
+      --text-light-primary: #FAF8F5;     /* Contrast > 17:1 on dark */
+      --text-light-secondary: #CBD5E1;   /* Contrast > 8.5:1 on dark */
+      --text-light-muted: #94A3B8;       /* Contrast > 5.5:1 on dark */
+
+      /* Gold Accents: Context-Aware Accessible Contrasts */
+      --gold-on-dark: #DFC5A2;           /* Contrast > 7.5:1 on dark */
+      --gold-deep-accessible: #78531C;   /* Contrast > 5.1:1 on light (WCAG AA pass) */
+      --gold-primary: #C5A880;
+      --gold-gradient: linear-gradient(135deg, #DFC5A2 0%, #C5A880 50%, #9D7B4E 100%);
+      --gold-soft-bg: rgba(197, 168, 128, 0.14);
+
+      /* Brazilian Justice Accent */
+      --brazil-green: #009B3A;
+      --status-online: #10B981;
+
+      /* Mosaic & architectural tones */
+      --mosaic-cognac: #8C6D46;
+      --mosaic-navy: #142236;
+      --mosaic-tan: #D2BA96;
+
+      /* Typography families */
+      --font-display: 'Cinzel', 'Cormorant Garamond', Georgia, serif;
+      --font-editorial: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 16px;
+      --radius-full: 9999px;
+
+      --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.04);
+      --shadow-card: 0 10px 30px rgba(15, 23, 34, 0.06);
+      --shadow-elevated: 0 20px 45px rgba(0, 0, 0, 0.12);
+      --shadow-gold: 0 8px 25px rgba(197, 168, 128, 0.28);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: var(--bg-light);
+      color: var(--text-dark-primary);
+      font-family: var(--font-body);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    /* ACCESSIBILITY: SKIP LINK */
+    .skip-link {
+      position: absolute;
+      top: -120px;
+      left: 20px;
+      z-index: 9999;
+      background: var(--gold-on-dark);
+      color: #080D14;
+      font-weight: 700;
+      padding: 14px 24px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+      border: 2px solid #080D14;
+      transition: top 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .skip-link:focus {
+      top: 16px;
+      outline: 3px solid #080D14;
+      outline-offset: 3px;
+    }
+
+    /* SCREEN READER ONLY UTILITY */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* GLOBAL ACCESSIBLE FOCUS RING (CamaraUX Padrão 11519 & WCAG 2.4.7/2.4.13) */
+    :focus-visible {
+      outline: 3px solid var(--gold-on-dark);
+      outline-offset: 3px;
+      border-radius: var(--radius-sm);
+    }
+
+    /* Light Realm Context: High-contrast brass ring (> 5.1:1 on Alabaster/White) */
+    .site-header.scrolled :focus-visible,
+    .ribbon-section :focus-visible,
+    .section-why :focus-visible,
+    .stats-bar-section :focus-visible,
+    .section-pillars :focus-visible,
+    .section-services :focus-visible,
+    .section-workflow :focus-visible,
+    .section-training :focus-visible,
+    .section-faq :focus-visible,
+    .section-decision .decision-card:not(.featured) :focus-visible {
+      outline: 3px solid var(--gold-deep-accessible);
+      outline-offset: 3px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 clamp(20px, 4vw, 48px);
+    }
+
+    /* KICKERS & TYPOGRAPHY */
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .kicker.dark-mode {
+      color: var(--gold-on-dark);
+    }
+
+    .kicker.dark-mode::before {
+      content: '';
+      display: inline-block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--gold-on-dark);
+    }
+
+    .kicker.light-mode {
+      color: var(--gold-deep-accessible);
+    }
+
+    .kicker.light-mode::before {
+      content: '';
+      display: inline-block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--gold-deep-accessible);
+    }
+
+    .h-editorial {
+      font-family: var(--font-editorial);
+      font-weight: 600;
+      line-height: 1.12;
+      letter-spacing: -0.01em;
+    }
+
+    .gold-serif-dark {
+      color: var(--gold-on-dark);
+      font-style: italic;
+      font-family: var(--font-editorial);
+    }
+
+    .gold-serif-light {
+      color: var(--gold-deep-accessible);
+      font-style: italic;
+      font-family: var(--font-editorial);
+    }
+
+    /* BUTTONS */
+    .btn-gold {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--gold-gradient);
+      color: #080D14;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.86rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 15px 30px;
+      min-height: 48px;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 4px 15px rgba(197, 168, 128, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-gold);
+      background: linear-gradient(135deg, #F0DBBC 0%, #D8BE96 50%, #B69260 100%);
+      color: #000;
+    }
+
+    .btn-ghost-dark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: rgba(14, 22, 34, 0.75);
+      color: var(--text-light-primary);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.86rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 15px 30px;
+      min-height: 48px;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(197, 168, 128, 0.45);
+      backdrop-filter: blur(8px);
+    }
+
+    .btn-ghost-dark:hover {
+      background: rgba(197, 168, 128, 0.15);
+      border-color: var(--gold-on-dark);
+      transform: translateY(-2px);
+      color: #fff;
+    }
+
+    .btn-outline-gold {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 26px;
+      min-height: 48px;
+      border-radius: var(--radius-sm);
+      border: 1.5px solid var(--gold-deep-accessible);
+      color: var(--gold-deep-accessible);
+      font-weight: 700;
+      font-size: 0.84rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: transparent;
+    }
+
+    .btn-outline-gold:hover {
+      background: var(--gold-deep-accessible);
+      color: #FAF8F5;
+      transform: translateY(-1px);
+    }
+
+    /* HEADER & NAVIGATION */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(8, 13, 20, 0.96);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(197, 168, 128, 0.18);
+      transition: all 0.3s ease;
+    }
+
+    .site-header.scrolled {
+      background: rgba(6, 10, 16, 0.98);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.75);
+      border-bottom-color: rgba(197, 168, 128, 0.35);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 78px;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 clamp(20px, 4vw, 48px);
+    }
+
+    .brand-logo-block {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      color: #FAF8F5;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+
+    .brand-sub {
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      letter-spacing: 0.22em;
+      color: var(--gold-on-dark);
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-top: 3px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-light-secondary);
+      position: relative;
+      padding: 8px 0;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gold-on-dark);
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: #FFFFFF;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      min-height: 44px;
+      border-radius: var(--radius-sm);
+      background: var(--gold-gradient);
+      color: #080D14;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .nav-cta-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 15px rgba(197, 168, 128, 0.4);
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--status-online);
+      box-shadow: 0 0 8px var(--status-online);
+      display: inline-block;
+      animation: pulseDot 2s infinite;
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.85); }
+    }
+
+    /* HERO SECTION */
+    .hero-section {
+      background-color: var(--bg-dark);
+      position: relative;
+      overflow: hidden;
+      padding-top: clamp(40px, 6vw, 70px);
+      padding-bottom: clamp(100px, 12vw, 150px);
+      border-bottom: 1px solid rgba(197, 168, 128, 0.15);
+    }
+
+    .hero-bg-layer {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 62%;
+      height: 100%;
+      background-image: url('assets/hero_bg.jpg');
+      background-size: cover;
+      background-position: center right;
+      opacity: 0.42;
+      filter: contrast(1.1) brightness(0.9);
+      pointer-events: none;
+    }
+
+    .hero-bg-gradient {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, #080D14 0%, #080D14 42%, rgba(8, 13, 20, 0.88) 58%, rgba(8, 13, 20, 0.35) 100%),
+                  linear-gradient(0deg, #080D14 0%, transparent 25%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: clamp(32px, 5vw, 64px);
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-content {
+      max-width: 680px;
+    }
+
+    .hero-badge-sla {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(14, 22, 34, 0.88);
+      border: 1px solid var(--border-gold-subtle);
+      padding: 7px 16px;
+      border-radius: var(--radius-full);
+      font-size: 0.74rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-light-secondary);
+      margin-bottom: 20px;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.3rem, 1.6rem + 2.8vw, 3.8rem);
+      line-height: 1.08;
+      font-weight: 700;
+      color: #FAF8F5;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      margin-bottom: 22px;
+    }
+
+    .hero-title .gold-accent {
+      color: var(--gold-on-dark);
+      font-family: var(--font-editorial);
+      text-transform: none;
+      font-style: italic;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    .hero-lead {
+      color: var(--text-light-secondary);
+      font-size: clamp(1rem, 0.94rem + 0.35vw, 1.15rem);
+      line-height: 1.7;
+      margin-bottom: 34px;
+      max-width: 580px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 36px;
+    }
+
+    .hero-trust-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.82rem;
+      color: var(--text-light-muted);
+    }
+
+    .trust-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .trust-item svg {
+      color: var(--gold-on-dark);
+      flex-shrink: 0;
+    }
+
+    /* Hero Portrait Visual */
+    .hero-visual-col {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    .hero-portrait-frame {
+      position: relative;
+      width: 100%;
+      max-width: 440px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-portrait-frame::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 85%;
+      height: 70%;
+      background: radial-gradient(circle, rgba(197, 168, 128, 0.22) 0%, rgba(8, 13, 20, 0) 70%);
+      filter: blur(28px);
+      z-index: 0;
+    }
+
+    .hero-portrait-img {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.7));
+    }
+
+    .hero-portrait-tag {
+      position: absolute;
+      bottom: 24px;
+      left: -10px;
+      z-index: 2;
+      background: rgba(14, 22, 34, 0.94);
+      border: 1px solid var(--border-gold-subtle);
+      border-left: 4px solid var(--gold-on-dark);
+      padding: 12px 18px;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+    }
+
+    .tag-title {
+      font-family: var(--font-display);
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #FAF8F5;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .tag-sub {
+      font-size: 0.74rem;
+      color: var(--gold-on-dark);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    /* FLOATING 3-CARD RIBBON (BRAZILIAN JUDICIAL THEMES) */
+    .ribbon-section {
+      position: relative;
+      margin-top: -85px;
+      z-index: 10;
+      padding-bottom: 70px;
+    }
+
+    .ribbon-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .ribbon-card {
+      background: var(--bg-light-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      box-shadow: var(--shadow-elevated);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .ribbon-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 50px rgba(15, 23, 34, 0.14);
+      border-color: rgba(197, 168, 128, 0.6);
+    }
+
+    .card-media {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+      background: #0E1622;
+    }
+
+    .card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .ribbon-card:hover .card-media img {
+      transform: scale(1.06);
+    }
+
+    .card-icon-badge {
+      position: absolute;
+      bottom: -22px;
+      left: 24px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #080D14;
+      border: 1px solid var(--gold-on-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-on-dark);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      z-index: 2;
+    }
+
+    .card-body {
+      padding: 34px 26px 26px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-title {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-dark-primary);
+      margin-bottom: 10px;
+    }
+
+    .card-desc {
+      font-size: 0.9rem;
+      color: var(--text-dark-secondary);
+      line-height: 1.6;
+      margin-bottom: 20px;
+      flex: 1;
+    }
+
+    .card-action-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold-deep-accessible);
+      border-bottom: 2px solid var(--gold-deep-accessible);
+      padding-bottom: 4px;
+      align-self: flex-start;
+      min-height: 36px;
+    }
+
+    .card-action-link:hover {
+      color: var(--text-dark-primary);
+      border-color: var(--text-dark-primary);
+      gap: 10px;
+    }
+
+    /* SECTION: POR QUE GUSTAVO BRASIL (COM FOTO REAL NO MICROSCÓPIO) */
+    .section-why {
+      padding: clamp(60px, 8vw, 110px) 0;
+      background: var(--bg-light);
+      position: relative;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: clamp(40px, 6vw, 72px);
+      align-items: center;
+    }
+
+    .why-content h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2vw, 3rem);
+      line-height: 1.15;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      color: var(--text-dark-primary);
+    }
+
+    .why-lead {
+      color: var(--text-dark-secondary);
+      font-size: 1.02rem;
+      line-height: 1.7;
+      margin-bottom: 36px;
+    }
+
+    .why-features-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .feat-card {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .feat-icon-box {
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+      background: var(--bg-light-contrast);
+      border: 1px solid rgba(120, 83, 28, 0.35);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-deep-accessible);
+    }
+
+    .feat-info h3 {
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-dark-primary);
+      margin-bottom: 6px;
+    }
+
+    .feat-info p {
+      font-size: 0.84rem;
+      color: var(--text-dark-secondary);
+      line-height: 1.55;
+    }
+
+    /* Mosaic Composition on Right (Real Expert Photo) */
+    .why-mosaic-col {
+      position: relative;
+    }
+
+    .mosaic-composition {
+      position: relative;
+      padding: 24px;
+    }
+
+    .mosaic-decor-tile-1 {
+      position: absolute;
+      top: 0;
+      right: 10px;
+      width: 48px;
+      height: 48px;
+      background: var(--mosaic-cognac);
+      opacity: 0.9;
+      z-index: 1;
+    }
+
+    .mosaic-decor-tile-2 {
+      position: absolute;
+      top: 48px;
+      right: 58px;
+      width: 48px;
+      height: 48px;
+      background: var(--mosaic-navy);
+      opacity: 0.9;
+      z-index: 1;
+    }
+
+    .mosaic-decor-tile-3 {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      width: 44px;
+      height: 44px;
+      background: var(--mosaic-tan);
+      opacity: 0.85;
+      z-index: 1;
+    }
+
+    .mosaic-decor-tile-4 {
+      position: absolute;
+      bottom: 64px;
+      left: 44px;
+      width: 44px;
+      height: 44px;
+      background: var(--mosaic-navy);
+      opacity: 0.95;
+      z-index: 1;
+    }
+
+    .mosaic-main-img {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-elevated);
+      overflow: hidden;
+    }
+
+    /* Dark Quote Card */
+    .mosaic-quote-box {
+      position: relative;
+      z-index: 3;
+      margin-top: -55px;
+      margin-left: clamp(20px, 5vw, 60px);
+      background: #0B131E;
+      color: #FAF8F5;
+      padding: 30px 32px;
+      border-radius: var(--radius-sm);
+      border-left: 3px solid var(--gold-on-dark);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+    }
+
+    .quote-icon {
+      color: var(--gold-on-dark);
+      font-size: 2.2rem;
+      line-height: 1;
+      font-family: var(--font-editorial);
+      margin-bottom: 8px;
+    }
+
+    .quote-text {
+      font-size: 0.96rem;
+      font-weight: 500;
+      line-height: 1.6;
+      color: #FFFFFF;
+      margin-bottom: 12px;
+    }
+
+    .quote-author {
+      font-size: 0.78rem;
+      color: var(--gold-on-dark);
+      letter-spacing: 0.05em;
+      font-weight: 600;
+    }
+
+    /* STATS & METRICS BAR */
+    .stats-bar-section {
+      background: #0A111A;
+      color: #FAF8F5;
+      padding: 50px 0;
+      border-top: 1px solid rgba(197, 168, 128, 0.2);
+      border-bottom: 1px solid rgba(197, 168, 128, 0.2);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      text-align: center;
+    }
+
+    .stat-item {
+      padding: 10px 16px;
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .stat-item:last-child {
+      border-right: none;
+    }
+
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 1.8rem + 1.8vw, 3.4rem);
+      font-weight: 700;
+      line-height: 1;
+      color: var(--gold-on-dark);
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-light-secondary);
+    }
+
+    /* SECTION: NOTRE EXPÉRIENCE (3 PILLARS) */
+    .section-pillars {
+      padding: clamp(70px, 9vw, 120px) 0;
+      background: var(--bg-light-subtle);
+    }
+
+    .pillars-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 60px;
+    }
+
+    .pillars-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2.1rem, 1.5rem + 2.2vw, 3.2rem);
+      text-transform: uppercase;
+      color: var(--text-dark-primary);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 36px;
+    }
+
+    .pillar-card {
+      background: var(--bg-light-surface);
+      padding: 44px 32px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-light);
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-elevated);
+      border-color: var(--gold-deep-accessible);
+    }
+
+    .pillar-circle-icon {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      border: 1.5px solid var(--gold-deep-accessible);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-deep-accessible);
+      margin-bottom: 24px;
+      transition: all 0.3s ease;
+      background: var(--bg-light);
+    }
+
+    .pillar-card:hover .pillar-circle-icon {
+      background: #080D14;
+      color: var(--gold-on-dark);
+      border-color: #080D14;
+    }
+
+    .pillar-title {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-dark-primary);
+      margin-bottom: 14px;
+    }
+
+    .pillar-desc {
+      font-size: 0.92rem;
+      color: var(--text-dark-secondary);
+      line-height: 1.65;
+    }
+
+    /* SECTION 01: ASSISTÊNCIA TÉCNICA */
+    .section-services {
+      padding: clamp(70px, 9vw, 120px) 0;
+      background: var(--bg-light);
+    }
+
+    .services-top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .services-top-bar h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2vw, 2.8rem);
+      text-transform: uppercase;
+      font-weight: 700;
+      max-width: 680px;
+    }
+
+    .service-cards-5 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 22px;
+      margin-bottom: 60px;
+    }
+
+    .scard {
+      background: var(--bg-light-surface);
+      border: 1px solid var(--border-light);
+      padding: 32px 28px;
+      border-radius: var(--radius-sm);
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .scard::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 28px;
+      width: 44px;
+      height: 3px;
+      background: var(--gold-deep-accessible);
+      transition: width 0.3s ease;
+    }
+
+    .scard:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-card);
+      border-color: var(--gold-deep-accessible);
+    }
+
+    .scard:hover::before {
+      width: 70px;
+    }
+
+    .scard-num {
+      font-family: var(--font-editorial);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--gold-deep-accessible);
+      margin-bottom: 12px;
+    }
+
+    .scard h3 {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text-dark-primary);
+      margin-bottom: 10px;
+    }
+
+    .scard p {
+      font-size: 0.88rem;
+      color: var(--text-dark-secondary);
+      line-height: 1.6;
+      margin-bottom: 18px;
+      flex: 1;
+    }
+
+    .scard-tag {
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold-deep-accessible);
+      background: var(--gold-soft-bg);
+      padding: 5px 12px;
+      border-radius: var(--radius-sm);
+      align-self: flex-start;
+    }
+
+    /* HOW IT WORKS WORKFLOW */
+    .workflow-box {
+      background: #0A111A;
+      color: #FAF8F5;
+      padding: 48px clamp(24px, 5vw, 56px);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-gold-subtle);
+      margin-top: 40px;
+    }
+
+    .workflow-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .workflow-head h3 {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #FAF8F5;
+    }
+
+    .workflow-steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      position: relative;
+    }
+
+    .wf-step {
+      position: relative;
+    }
+
+    .wf-num {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--gold-on-dark);
+      line-height: 1;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .wf-num-arrow {
+      font-size: 1.2rem;
+      opacity: 0.5;
+    }
+
+    .wf-title {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 6px;
+    }
+
+    .wf-desc {
+      font-size: 0.84rem;
+      color: var(--text-light-muted);
+      line-height: 1.55;
+    }
+
+    .workflow-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    /* SECTION 02: FORMAÇÃO 123 PERITO */
+    .section-training {
+      padding: clamp(70px, 9vw, 120px) 0;
+      background: var(--bg-light-subtle);
+    }
+
+    .training-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: clamp(40px, 5vw, 64px);
+      align-items: center;
+    }
+
+    .training-content h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2vw, 2.8rem);
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .curriculum-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 26px 0 34px;
+    }
+
+    .curriculum-pill {
+      background: var(--bg-light-surface);
+      border: 1px solid var(--border-light-strong);
+      padding: 8px 16px;
+      border-radius: var(--radius-full);
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--text-dark-primary);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .curriculum-pill svg {
+      color: var(--gold-deep-accessible);
+    }
+
+    .training-features-card {
+      background: #0E1622;
+      color: #FAF8F5;
+      padding: 38px 34px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-gold-subtle);
+      box-shadow: var(--shadow-elevated);
+    }
+
+    .tf-badge {
+      display: inline-block;
+      font-size: 0.74rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold-on-dark);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .tf-list {
+      list-style: none;
+      margin: 20px 0 28px;
+    }
+
+    .tf-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.92rem;
+      color: var(--text-light-secondary);
+    }
+
+    .tf-list li:last-child {
+      border-bottom: none;
+    }
+
+    .tf-list svg {
+      color: var(--gold-on-dark);
+      flex-shrink: 0;
+    }
+
+    /* SECTION 03: PLATAFORMA CRM DO PERITO (CLEAN SAAS UI, NO MACOS SLOP) */
+    .section-platform {
+      padding: clamp(70px, 9vw, 120px) 0;
+      background: #080D14;
+      color: #FAF8F5;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .platform-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 56px;
+    }
+
+    .platform-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2vw, 3rem);
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #FAF8F5;
+      margin-bottom: 16px;
+    }
+
+    /* Professional Forensic SaaS Frame */
+    .crm-mockup-frame {
+      background: #0D1522;
+      border: 1px solid rgba(197, 168, 128, 0.4);
+      border-radius: var(--radius-md);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75);
+      overflow: hidden;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .crm-topbar {
+      background: #141F2E;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .crm-saas-identity {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .crm-saas-badge {
+      background: rgba(197, 168, 128, 0.16);
+      color: var(--gold-on-dark);
+      padding: 3px 10px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 1px solid rgba(197, 168, 128, 0.3);
+    }
+
+    .crm-brand-title {
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #FAF8F5;
+    }
+
+    .crm-security-tag {
+      font-size: 0.75rem;
+      color: var(--status-online);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .crm-body-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+      padding: 28px;
+    }
+
+    .crm-panel-card {
+      background: #131E2D;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-sm);
+      padding: 22px;
+    }
+
+    .panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .panel-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-light-muted);
+    }
+
+    .panel-tag {
+      font-size: 0.72rem;
+      background: var(--gold-soft-bg);
+      color: var(--gold-on-dark);
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .crm-stat-highlight {
+      font-family: var(--font-display);
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: #10B981;
+      margin: 12px 0 16px;
+    }
+
+    .crm-funnel-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      font-size: 0.84rem;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+      color: var(--text-light-secondary);
+    }
+
+    .agenda-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .agenda-time {
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.82rem;
+      color: var(--gold-on-dark);
+      background: rgba(197, 168, 128, 0.14);
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+
+    .agenda-desc {
+      font-size: 0.84rem;
+      color: var(--text-light-secondary);
+      flex: 1;
+    }
+
+    .agenda-status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gold-on-dark);
+    }
+
+    .leads-bar-row {
+      margin-bottom: 12px;
+    }
+
+    .leads-info {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      margin-bottom: 5px;
+      color: var(--text-light-secondary);
+    }
+
+    .leads-progress {
+      height: 6px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .leads-fill {
+      height: 100%;
+      background: var(--gold-gradient);
+    }
+
+    /* 123 PERITO PLANS (STARTER, PRO, PREMIUM) */
+    .platform-plans-wrapper {
+      margin-top: 56px;
+    }
+
+    .platform-plans-title {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .platform-plans-title h3 {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 1.2rem + 1vw, 2.3rem);
+      color: #FAF8F5;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .platform-plans-title p {
+      color: var(--text-light-muted);
+      font-size: 0.95rem;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .plans-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    .plan-card {
+      background: #0E1622;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-sm);
+      padding: 34px 26px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .plan-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--gold-on-dark);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+    }
+
+    .plan-card.featured {
+      background: #141F2E;
+      border: 1.5px solid var(--gold-on-dark);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(197, 168, 128, 0.2);
+    }
+
+    .plan-badge-featured {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold-gradient);
+      color: #080D14;
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: var(--radius-full);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      white-space: nowrap;
+    }
+
+    .plan-name {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #FAF8F5;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 6px;
+    }
+
+    .plan-desc {
+      font-size: 0.83rem;
+      color: var(--text-light-muted);
+      margin-bottom: 18px;
+      min-height: 38px;
+      line-height: 1.5;
+    }
+
+    .plan-price-box {
+      margin-bottom: 22px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+
+    .plan-price-currency {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--gold-on-dark);
+    }
+
+    .plan-price-val {
+      font-family: var(--font-display);
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: var(--gold-on-dark);
+      line-height: 1;
+    }
+
+    .plan-price-period {
+      font-size: 0.82rem;
+      color: var(--text-light-muted);
+    }
+
+    .plan-features-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 28px 0;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .plan-features-list li {
+      font-size: 0.84rem;
+      color: var(--text-light-secondary);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      line-height: 1.45;
+    }
+
+    .plan-features-list li svg {
+      color: var(--gold-on-dark);
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    .plan-btn-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 20px;
+      min-height: 48px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      transition: all 0.25s ease;
+      text-align: center;
+    }
+
+    .plan-btn-action.gold {
+      background: var(--gold-on-dark);
+      color: #080D14;
+    }
+
+    .plan-btn-action.gold:hover {
+      background: #F0DBBC;
+      transform: translateY(-2px);
+    }
+
+    .plan-btn-action.ghost {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #FAF8F5;
+    }
+
+    .plan-btn-action.ghost:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: var(--gold-on-dark);
+      color: var(--gold-on-dark);
+    }
+
+    .platform-cta-banner {
+      background: rgba(197, 168, 128, 0.08);
+      border: 1px solid var(--border-gold-subtle);
+      border-radius: var(--radius-sm);
+      padding: 24px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .platform-cta-text h4 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      color: #FFFFFF;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .platform-cta-text p {
+      font-size: 0.86rem;
+      color: var(--text-light-muted);
+    }
+
+    .platform-cta-links {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 1024px) {
+      .plans-grid {
+        grid-template-columns: 1fr;
+      }
+      .platform-cta-banner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    /* SECTION 04: FAQ ACCORDION (FULLY ACCESSIBLE W/ ARIA & CONTROLS) */
+    .section-faq {
+      padding: clamp(70px, 9vw, 120px) 0;
+      background: var(--bg-light);
+    }
+
+    .faq-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 50px;
+    }
+
+    .faq-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2vw, 3rem);
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--text-dark-primary);
+    }
+
+    .faq-accordion-list {
+      max-width: 840px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: var(--bg-light-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      margin-bottom: 14px;
+      box-shadow: var(--shadow-subtle);
+      transition: border-color 0.2s ease;
+    }
+
+    .faq-item.active {
+      border-color: var(--gold-deep-accessible);
+    }
+
+    .faq-question-btn {
+      width: 100%;
+      text-align: left;
+      padding: 22px 26px;
+      min-height: 52px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--text-dark-primary);
+    }
+
+    .faq-icon-chevron {
+      color: var(--gold-deep-accessible);
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .faq-item.active .faq-icon-chevron {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer-panel {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      padding: 0 26px;
+    }
+
+    .faq-item.active .faq-answer-panel {
+      max-height: 400px;
+      padding-bottom: 24px;
+    }
+
+    .faq-answer-text {
+      font-size: 0.94rem;
+      color: var(--text-dark-secondary);
+      line-height: 1.68;
+      border-top: 1px solid var(--border-light);
+      padding-top: 16px;
+    }
+
+    /* SECTION 05: PRÓXIMO PASSO (DECISION CARDS) */
+    .section-decision {
+      padding: clamp(70px, 9vw, 120px) 0;
+      background: var(--bg-light-subtle);
+    }
+
+    .decision-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 50px;
+    }
+
+    .decision-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2vw, 3rem);
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .decision-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
+    .decision-card {
+      background: var(--bg-light-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      padding: clamp(32px, 5vw, 48px);
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-card);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .decision-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-elevated);
+      border-color: var(--gold-deep-accessible);
+    }
+
+    .decision-card.featured {
+      background: #080D14;
+      color: #FAF8F5;
+      border-color: var(--border-gold-subtle);
+    }
+
+    .decision-card.featured .decision-kicker {
+      color: var(--gold-on-dark);
+    }
+
+    .decision-card.featured .decision-title {
+      color: #FFFFFF;
+    }
+
+    .decision-card.featured .decision-desc {
+      color: var(--text-light-secondary);
+    }
+
+    .decision-kicker {
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold-deep-accessible);
+      margin-bottom: 12px;
+    }
+
+    .decision-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 1.1rem + 1vw, 1.85rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+
+    .decision-desc {
+      font-size: 0.94rem;
+      line-height: 1.65;
+      color: var(--text-dark-secondary);
+      margin-bottom: 30px;
+      flex: 1;
+    }
+
+    /* FOOTER */
+    .site-footer {
+      background: #05080E;
+      color: #FAF8F5;
+      padding: clamp(60px, 8vw, 90px) 0 36px;
+      border-top: 1px solid rgba(197, 168, 128, 0.2);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .footer-brand h4 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      margin-bottom: 6px;
+    }
+
+    .footer-brand-role {
+      font-size: 0.76rem;
+      color: var(--gold-on-dark);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    .footer-brand p {
+      font-size: 0.86rem;
+      color: var(--text-light-muted);
+      line-height: 1.6;
+      max-width: 320px;
+    }
+
+    .footer-col h5 {
+      font-family: var(--font-display);
+      font-size: 0.88rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      margin-bottom: 18px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      font-size: 0.86rem;
+      color: var(--text-light-secondary);
+    }
+
+    .footer-links a:hover {
+      color: var(--gold-on-dark);
+    }
+
+    .newsletter-form {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .newsletter-input-group {
+      display: flex;
+      gap: 8px;
+    }
+
+    .newsletter-input {
+      background: #0E1622;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      min-height: 48px;
+      color: #FFFFFF;
+      font-size: 0.84rem;
+      flex: 1;
+      font-family: inherit;
+      transition: border-color 0.2s ease, background-color 0.2s ease;
+    }
+
+    .newsletter-input:focus-visible {
+      outline: 3px solid var(--gold-on-dark);
+      outline-offset: 2px;
+      border-color: var(--gold-on-dark);
+    }
+
+    .newsletter-input[aria-invalid="true"] {
+      border-color: #EF4444;
+      background: rgba(239, 68, 68, 0.1);
+    }
+
+    .newsletter-btn {
+      background: var(--gold-on-dark);
+      color: #080D14;
+      font-weight: 700;
+      font-size: 0.8rem;
+      padding: 12px 18px;
+      min-height: 48px;
+      border-radius: var(--radius-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      border: none;
+      transition: background 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .newsletter-btn:hover:not(:disabled) {
+      background: #F0DBBC;
+      transform: translateY(-1px);
+    }
+
+    .newsletter-btn:disabled {
+      opacity: 0.65;
+      cursor: not-allowed;
+    }
+
+    .newsletter-feedback {
+      font-size: 0.8rem;
+      line-height: 1.4;
+      min-height: 20px;
+      transition: all 0.25s ease;
+    }
+
+    .newsletter-feedback.success {
+      color: #34D399;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .newsletter-feedback.error {
+      color: #F87171;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .newsletter-feedback.loading {
+      color: var(--gold-on-dark);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .footer-bottom {
+      padding-top: 28px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.8rem;
+      color: var(--text-light-muted);
+    }
+
+    .footer-social-row {
+      display: flex;
+      gap: 18px;
+    }
+
+    .footer-social-row a {
+      color: var(--text-light-secondary);
+      font-size: 0.84rem;
+    }
+
+    .footer-social-row a:hover {
+      color: var(--gold-on-dark);
+    }
+
+    /* REFINED EXECUTIVE WHATSAPP WIDGET (NO NEON SLOP) */
+    .executive-wa-widget {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 99;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #0C1420;
+      border: 1.5px solid var(--gold-on-dark);
+      color: #FAF8F5;
+      padding: 10px 18px 10px 12px;
+      border-radius: var(--radius-full);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.65), 0 0 15px rgba(197, 168, 128, 0.25);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      min-height: 52px;
+    }
+
+    .executive-wa-widget:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8), 0 0 22px rgba(197, 168, 128, 0.4);
+      background: #111D2E;
+    }
+
+    .wa-icon-circle {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #25D366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      flex-shrink: 0;
+    }
+
+    .wa-widget-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .wa-widget-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--gold-on-dark);
+    }
+
+    .wa-widget-sub {
+      font-size: 0.68rem;
+      color: var(--text-light-secondary);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* REDUCED MOTION PREFERENCES */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    /* RESPONSIVE BREAKPOINTS */
+    @media (max-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: left;
+      }
+      .hero-visual-col {
+        justify-content: center;
+      }
+      .why-grid, .training-grid {
+        grid-template-columns: 1fr;
+      }
+      .ribbon-grid {
+        grid-template-columns: 1fr;
+      }
+      .ribbon-section {
+        margin-top: -40px;
+      }
+      .pillars-grid {
+        grid-template-columns: 1fr;
+      }
+      .workflow-steps-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .crm-body-grid {
+        grid-template-columns: 1fr;
+      }
+      .stats-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .stat-item {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 16px;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .workflow-steps-grid {
+        grid-template-columns: 1fr;
+      }
+      .why-features-grid {
+        grid-template-columns: 1fr;
+      }
+      .decision-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+      .executive-wa-widget .wa-widget-text {
+        display: none;
+      }
+      .executive-wa-widget {
+        padding: 6px;
+        width: 52px;
+        height: 52px;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ACCESSIBILITY: SKIP LINK -->
+  <a href="#main" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="nav-container">
+      <a href="#home" class="brand-logo-block" aria-label="Gustavo Brasil - Página inicial">
+        <span class="brand-name">Gustavo Brasil</span>
+        <span class="brand-sub">Perícia · Direito · Tecnologia</span>
+      </a>
+
+      <nav aria-label="Navegação Principal">
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#assistencia">Assistência</a></li>
+          <li><a href="#pilares">Método</a></li>
+          <li><a href="#formacao">Formação</a></li>
+          <li><a href="#plataforma">Plataforma</a></li>
+          <li><a href="https://123perito.com.br/planos" target="_blank" rel="noopener noreferrer">Planos ↗</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <a href="https://api.whatsapp.com/send/?phone=5534991948659&text=Ol%C3%A1%2C%20Dr.%20Gustavo.%20Sou%20advogado(a)%20e%20preciso%20de%20an%C3%A1lise%20t%C3%A9cnica.%20Prazo%3A__%20Comarca%3A__" target="_blank" rel="noopener noreferrer" class="nav-cta-btn" aria-label="Falar com Dr. Gustavo Brasil no WhatsApp (abre em nova janela)">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>◉ WhatsApp</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- MAIN LANDMARK -->
+  <main id="main">
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-section" aria-labelledby="hero-heading">
+      <div class="hero-bg-layer" aria-hidden="true"></div>
+      <div class="hero-bg-gradient" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge-sla">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>Resposta em até 4h úteis · OAB/MG · Atuação em todo o Brasil</span>
+          </div>
+
+          <div class="kicker dark-mode">Perito Judicial há 18 anos · 3.000+ Laudos</div>
+
+          <h1 id="hero-heading" class="hero-title">
+            O laudo que sustenta a sua <span class="gold-accent">tese em juízo</span>.
+          </h1>
+
+          <p class="hero-lead">
+            Assistência técnica em grafotécnica, documentoscopia digital, geolocalização, IP e biometria facial. Quesitos precisos, parecer fundamentado e impugnação consistente — para advogados que não podem correr risco com a prova.
+          </p>
+
+          <div class="hero-actions">
+            <a href="https://api.whatsapp.com/send/?phone=5534991948659&text=Ol%C3%A1%2C%20preciso%20de%20assist%C3%AAncia%20t%C3%A9cnica.%20Tipo%3A__%20Prazo%3A__" target="_blank" rel="noopener noreferrer" class="btn-gold" aria-label="Solicitar análise de viabilidade pericial no WhatsApp (abre em nova janela)">
+              Solicitar Análise de Viabilidade Pericial →
+            </a>
+            <a href="#assistencia" class="btn-ghost-dark">
+              Conhecer Especialidades & Metodologia ↓
+            </a>
+          </div>
+
+          <div class="hero-trust-bar">
+            <div class="trust-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Retorno em horário comercial (Seg–Sex 9–18h)</span>
+            </div>
+            <div class="trust-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Análise de viabilidade sem compromisso</span>
+            </div>
+            <div class="trust-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>TJMG · TJSP · TRFs · 12 UFs</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual-col">
+          <div class="hero-portrait-frame">
+            <img src="assets/gustavo_brasil_cutout.png" alt="Dr. Gustavo Brasil vestindo terno risca de giz e gravata dourada" class="hero-portrait-img">
+            <div class="hero-portrait-tag">
+              <div class="tag-title">Gustavo Brasil</div>
+              <div class="tag-sub">Perito Judicial · Advogado · Professor</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLOATING 3-CARD RIBBON (100% BRAZILIAN ARCHITECTURE & NOTARIAL EVIDENCE) -->
+    <section class="ribbon-section" aria-label="Áreas de Ênfase Forense">
+      <div class="container">
+        <div class="ribbon-grid">
+          
+          <!-- Card 1: Grafotécnica Brasileira -->
+          <article class="ribbon-card">
+            <div class="card-media">
+              <img src="assets/card_grafotecnica.jpg" alt="Exame pericial grafotécnico em contrato de prestação de serviços com selo notarial de São Paulo sob lupa de precisão">
+              <div class="card-icon-badge" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Grafotécnica & Documentos</h3>
+              <p class="card-desc">Exame de punho escritor, detecção de decalques, enxertos e falsificações em contratos físicos e digitais com rigor microscópico.</p>
+              <a href="https://api.whatsapp.com/send/?phone=5534991948659&text=Ol%C3%A1%2C%20preciso%20de%20per%C3%ADcia%20grafot%C3%A9cnica.%20Documento%3A__" target="_blank" rel="noopener noreferrer" class="card-action-link" aria-label="Solicitar perícia grafotécnica com Dr. Gustavo Brasil no WhatsApp (abre em nova janela)">Solicitar Perícia Grafotécnica →</a>
+            </div>
+          </article>
+
+          <!-- Card 2: Palácio da Justiça do Brasil -->
+          <article class="ribbon-card">
+            <div class="card-media">
+              <img src="assets/card_tribunal.jpg" alt="Fachada monumental do Palácio da Justiça com a bandeira do Brasil e colunas neoclássicas">
+              <div class="card-icon-badge" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Defesa Estratégica</h3>
+              <p class="card-desc">Formulação precisa de quesitos para delimitar o escopo da perícia oficial nos tribunais, blindando a tese e neutralizando armadilhas adversas.</p>
+              <a href="https://api.whatsapp.com/send/?phone=5534991948659&text=Ol%C3%A1%2C%20preciso%20de%20quesitos%20estrat%C3%A9gicos%20para%20meu%20caso.%20Prazo%3A__" target="_blank" rel="noopener noreferrer" class="card-action-link" aria-label="Elaborar quesitos periciais no WhatsApp (abre em nova janela)">Elaborar Quesitos Cirúrgicos →</a>
+            </div>
+          </article>
+
+          <!-- Card 3: Lady Justice com Balança Dourada -->
+          <article class="ribbon-card">
+            <div class="card-media">
+              <img src="assets/card_justitia.jpg" alt="Estátua clássica da Justiça com balança de latão dourado em gabinete jurídico">
+              <div class="card-icon-badge" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18"/><path d="M3 7l9-4 9 4"/><path d="M6 10l-3 6h6l-3-6z"/><path d="M18 10l-3 6h6l-3-6z"/></svg>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Resultados Concretos</h3>
+              <p class="card-desc">Pareceres e impugnações técnicas fundamentadas nas normas da ABNT e IBAPE, desenvolvidos para sustentar sua tese perante o magistrado.</p>
+              <a href="https://api.whatsapp.com/send/?phone=5534991948659&text=Ol%C3%A1%2C%20preciso%20de%20impugna%C3%A7%C3%A3o%20de%20laudo%20adverso.%20Prazo%3A__" target="_blank" rel="noopener noreferrer" class="card-action-link" aria-label="Contratar parecer técnico pericial no WhatsApp (abre em nova janela)">Contratar Parecer Técnico →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: POR QUE GUSTAVO BRASIL (COM FOTO REAL NO MICROSCÓPIO E BALANÇA) -->
+    <section class="section-why" aria-labelledby="why-heading">
+      <div class="container why-grid">
+        <div class="why-content">
+          <div class="kicker light-mode">Rigor Técnico · Estratégia Jurídica</div>
+          <h2 id="why-heading">Perícia não é opinião.<br><span class="gold-serif-light">É método, evidência e rastreabilidade.</span></h2>
+          <p class="why-lead">
+            Perito judicial e assistente técnico de escritórios e empresas. Do quesito bem formulado ao parecer que se sustenta em audiência. Método científico, cadeia de custódia e linguagem que o juízo compreende.
+          </p>
+
+          <div class="why-features-grid">
+            <div class="feat-card">
+              <div class="feat-icon-box" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div class="feat-info">
+                <h3>Cadeia de Custódia</h3>
+                <p>Rastreabilidade absoluta, hashes criptográficos e integridade probatória em conformidade com o CPP e CPC.</p>
+              </div>
+            </div>
+
+            <div class="feat-card">
+              <div class="feat-icon-box" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="12 8 8 12 12 16 16 12 12 8"/></svg>
+              </div>
+              <div class="feat-info">
+                <h3>Quesitos Cirúrgicos</h3>
+                <p>Elaboração técnica estratégica para vincular o perito do juízo e afastar conjecturas infundadas.</p>
+              </div>
+            </div>
+
+            <div class="feat-card">
+              <div class="feat-icon-box" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              </div>
+              <div class="feat-info">
+                <h3>Linguagem para o Juiz</h3>
+                <p>Tradução do jargão técnico em fundamentação forense límpida, facilitando a decisão favorável do magistrado.</p>
+              </div>
+            </div>
+
+            <div class="feat-card">
+              <div class="feat-icon-box" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="feat-info">
+                <h3>Agilidade em Prazos</h3>
+                <p>Resposta em até 4h úteis para análise de viabilidade e atuação célere em tutelas de urgência.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="why-mosaic-col">
+          <div class="mosaic-composition">
+            <!-- Architectural mosaic tiles -->
+            <div class="mosaic-decor-tile-1" aria-hidden="true"></div>
+            <div class="mosaic-decor-tile-2" aria-hidden="true"></div>
+            <div class="mosaic-decor-tile-3" aria-hidden="true"></div>
+            <div class="mosaic-decor-tile-4" aria-hidden="true"></div>
+
+            <div class="mosaic-main-img">
+              <img src="assets/gustavo_brasil_microscopio.jpg" alt="Dr. Gustavo Brasil examinando documento sob estereomicroscópio com a balança da justiça e livros forenses na mesa">
+            </div>
+
+            <!-- Dark Quote Box directly mirroring the reference design -->
+            <div class="mosaic-quote-box">
+              <div class="quote-icon" aria-hidden="true">“</div>
+              <p class="quote-text">Impugnação aceita, assinatura afastada. Quesitos precisos mudaram o rumo do processo.</p>
+              <div class="quote-author">— Advogado criminalista, SP · Laudo modelo disponível na análise</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS RIBBON -->
+    <section class="stats-bar-section" aria-label="Indicadores de Autoridade Forense">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number">18+</div>
+            <div class="stat-label">Anos de Perícia Judicial</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">3.000+</div>
+            <div class="stat-label">Laudos Produzidos</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">1.000+</div>
+            <div class="stat-label">Alunos e Peritos Formados</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">BR</div>
+            <div class="stat-label">Atendimento Nacional (12 UFs)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: PILARES DE ATUAÇÃO -->
+    <section id="pilares" class="section-pillars" aria-labelledby="pillars-heading">
+      <div class="container">
+        <div class="pillars-header">
+          <div class="kicker light-mode">Experiência a serviço da sua causa</div>
+          <h2 id="pillars-heading">Estratégia. Método. Resultados.</h2>
+          <p class="why-lead">Combinamos 18 anos de vivência forense, perícia digital contemporânea e estratégia processual de alto nível.</p>
+        </div>
+
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-circle-icon" aria-hidden="true">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3 class="pillar-title">Estratégia</h3>
+            <p class="pillar-desc">Análise prévia de viabilidade para verificar a solidez da prova material antes de qualquer protocolo, evitando aventuras e desgastes desnecessários.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-circle-icon" aria-hidden="true">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="pillar-title">Compromisso</h3>
+            <p class="pillar-desc">Acompanhamento dedicado do início da nomeação até a sustentação do parecer, garantindo a ampla defesa e o contraditório substancial.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-circle-icon" aria-hidden="true">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h3 class="pillar-title">Performance</h3>
+            <p class="pillar-desc">Conclusões fundamentadas em métricas verificáveis, exames macroscópicos e jurisprudência pacificada, maximizando a chance de êxito.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 01: ASSISTÊNCIA TÉCNICA -->
+    <section id="assistencia" class="section-services" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="services-top-bar">
+          <div>
+            <div class="kicker light-mode">01 · Assistência Técnica Especializada</div>
+            <h2 id="services-heading">Assistência técnica para teses que dependem de prova.</h2>
+          </div>
+          <a href="https://api.whatsapp.com/send/?phone=5534991948659&text=Ol%C3%A1%2C%20sou%20ADVOGADO%20e%20preciso%20de%20assistencia.%20Prazo%3A__" target="_blank" rel="noopener noreferrer" class="btn-gold" aria-label="Solicitar análise de viabilidade técnica no WhatsApp (abre em nova janela)">
+            Solicitar análise de viabilidade →
+          </a>
+        </div>
+
+        <div class="service-cards-5">
+          <div class="scard">
+            <div class="scard-num">01</div>
+            <h3>Grafotécnica</h3>
+            <p>Autenticidade e falsidade de assinaturas e rubricas. Análise de senilidade, decalques, tremor forçado e autofalsificação.</p>
+            <span class="scard-tag">Autenticidade de Assinaturas</span>
+          </div>
+
+          <div class="scard">
+            <div class="scard-num">02</div>
+            <h3>Documentoscopia Digital</h3>
+            <p>Perícia em contratos digitais (DocuSign, ClickSign, Gov.br), metadados EXIF, interpolação de páginas e edição de PDFs.</p>
+            <span class="scard-tag">Fraudes Eletrônicas</span>
+          </div>
+
+          <div class="scard">
+            <div class="scard-num">03</div>
+            <h3>Geolocalização Forense</h3>
+            <p>Extração e triangulação de antenas celulares (ERBs), logs de GPS, comprovação de álibi ou de presença física.</p>
+            <span class="scard-tag">Dados de Antenas & GPS</span>
+          </div>
+
+          <div class="scard">
+            <div class="scard-num">04</div>
+            <h3>Análise de IP & Conexões</h3>
+            <p>Rastreamento de logs de IP, portas lógicas, identificação de autoria em fraudes bancárias e crimes digitais.</p>
+            <span class="scard-tag">Rastreabilidade Web</span>
+          </div>
+
+          <div class="scard">
+            <div class="scard-num">05</div>
+            <h3>Biometria Facial & Selfie</h3>
+            <p>Fraude em onboarding bancário, liveness detection (prova de vida), detecção de deepfakes e montagens de imagem.</p>
+            <span class="scard-tag">Selfie & Liveness</span>
+          </div>
+        </div>
+
+        <!-- WORKFLOW BOX (COMO FUNCIONA) -->
+        <div class="workflow-box">
+          <div class="workflow-head">
+            <div>
+              <div class="kicker dark-mode">Jornada Transparente</div>
+              <h3>Como funciona a atuação pericial</h3>
+            </div>
+            <span style="font-size: 0.82rem; color: var(--text-light-muted);">Verificação de conflito de interesses em todos os casos.</span>
+          </div>
+
+          <div class="workflow-steps-grid">
+            <div class="wf-step">
+              <div class="wf-num">01 <span class="wf-num-arrow" aria-hidden="true">→</span></div>
+              <div class="wf-title">Análise inicial do caso</div>
+              <div class="wf-desc">Triagem sem compromisso para atestar a viabilidade técnica e a ausência de impedimento ético.</div>
+            </div>
+
+            <div class="wf-step">
+              <div class="wf-num">02 <span class="wf-num-arrow" aria-hidden="true">→</span></div>
+              <div class="wf-title">Quesitos e tese técnica</div>
+              <div class="wf-desc">Redação cirúrgica dos quesitos para vincular o perito judicial às balizas do direito probatório.</div>
+            </div>
+
+            <div class="wf-step">
+              <div class="wf-num">03 <span class="wf-num-arrow" aria-hidden="true">→</span></div>
+              <div class="wf-title">Parecer e diligência</div>
+              <div class="wf-desc">Acompanhamento da perícia oficial presencial ou remota e elaboração de parecer técnico conclusivo.</div>
+            </div>
+
+            <div class="wf-step">
+              <div class="wf-num">04 <span class="wf-num-arrow" style="color:#10B981;" aria-hidden="true">✓</span></div>
+              <div class="wf-title">Impugnação se preciso</div>
+              <div class="wf-desc">Desconstrução pontual de laudos judiciais desfavoráveis que apresentem falhas metodológicas.</div>
+            </div>
+          </div>
+
+          <div class="workflow-footer">
+            <span style="font-size: 0.86rem; color: var(--text-light-secondary);">
+              Atendimento nacional: remoto com segurança cibernética e presencial quando necessário.
+            </span>
+            <a href="mailto:contato@advgustavobrasil.com.br" style="font-size: 0.86rem; color: var(--gold-on-dark); text-decoration: underline;" aria-label="Enviar e-mail para contato@advgustavobrasil.com.br">
+              Prefere e-mail? contato@advgustavobrasil.com.br
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 02: FORMAÇÃO 123 PERITO -->
+    <section id="formacao" class="section-training" aria-labelledby="training-heading">
+      <div class="container training-grid">
+        <div class="training-content">
+          <div class="kicker light-mode">02 · Formação Profissional</div>
+          <h2 id="training-heading">Formação 123 Perito: da técnica à nomeação.</h2>
+          <p class="why-lead">
+            Para quem parte do zero absoluto ou deseja recorrência de honorários: grafotécnica, documentoscopia digital, biblioteca de modelos, precificação estratégica e prospecção junto a varas e escritórios de advocacia.
+          </p>
+
+          <div class="curriculum-pills">
+            <span class="curriculum-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Grafotécnica</span>
+            <span class="curriculum-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Documentoscopia Digital</span>
+            <span class="curriculum-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Prospecção Ativa</span>
+            <span class="curriculum-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Marketing Jurídico</span>
+            <span class="curriculum-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> IA aplicada a Laudos</span>
+            <span class="curriculum-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Modelos Editáveis</span>
+            <span class="curriculum-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Comunidade Nacional</span>
+          </div>
+
+          <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px;">
+            <a href="https://gustavobrasil5.hotmart.host/pagina-de-vendas-6e0d3631-c30b-48cf-b9fa-ed235b8c39d4" target="_blank" rel="noopener noreferrer" class="btn-gold" aria-label="Garantir vaga na Formação 123 Perito na Hotmart (abre em nova janela)">
+              Garantir vaga na Formação 123 Perito →
+            </a>
+            <a href="https://api.whatsapp.com/send/?phone=5534991948659&text=Ol%C3%A1%2C%20Dr.%20Gustavo.%20Gostaria%20de%20saber%20mais%20sobre%20a%20Forma%C3%A7%C3%A3o%20123%20Perito." target="_blank" rel="noopener noreferrer" class="btn-ghost-dark" aria-label="Tirar dúvidas sobre a formação pelo WhatsApp (abre em nova janela)">
+              Tirar dúvidas no WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="training-card-col">
+          <div class="training-features-card">
+            <span class="tf-badge">123 PERITO · PROGRAMA COMPLETO</span>
+            <h3 style="font-family: var(--font-display); font-size: 1.5rem; color: #FFFFFF; margin-bottom: 8px;">Início e Recorrência de Honorários</h3>
+            <p style="font-size: 0.9rem; color: var(--text-light-muted);">Judicial e extrajudicial. Como captar bancas de advocacia, precificar com segurança, laudar com precisão e ser nomeado com frequência.</p>
+
+            <ul class="tf-list">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>+1.000 alunos e peritos formados em todo o Brasil</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Modelos validados em 3.000+ laudos periciais reais</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Acesso ao grupo seleto de networking profissional</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Mentoria direta com o Dr. Gustavo Brasil</span>
+              </li>
+            </ul>
+
+            <div style="background: rgba(197, 168, 128, 0.12); border: 1px solid var(--border-gold-subtle); padding: 14px 18px; border-radius: var(--radius-sm); font-size: 0.84rem; color: var(--gold-on-dark);">
+              💡 Turmas com vagas limitadas para garantir o acompanhamento individualizado de cada aluno.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 03: PLATAFORMA CRM DO PERITO (SISTEMA FORENSE INTEGRADO) -->
+    <section id="plataforma" class="section-platform" aria-labelledby="platform-heading">
+      <div class="container">
+        <div class="platform-header">
+          <div class="kicker dark-mode">03 · Plataforma de Gestão Forense</div>
+          <h2 id="platform-heading">Casos, agenda e honorários em ordem.</h2>
+          <p class="hero-lead" style="margin: 0 auto;">
+            CRM completo, controle rigoroso de prazos, custódia de documentos e recebimento de honorários. Prospecção organizada junto a escritórios sem planilhas improvisadas.
+          </p>
+        </div>
+
+        <!-- Clean SaaS Frame w/out macOS Window Slop -->
+        <div class="crm-mockup-frame">
+          <div class="crm-topbar">
+            <div class="crm-saas-identity">
+              <span class="crm-saas-badge">SaaS Forense</span>
+              <span class="crm-brand-title">123 Perito OS · Módulo Gestão Judicial</span>
+            </div>
+            <div class="crm-security-tag">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span>Conexão Criptografada 256-bit</span>
+            </div>
+          </div>
+
+          <div class="crm-body-grid">
+            
+            <!-- Panel 1: Pipeline de Honorários -->
+            <div class="crm-panel-card">
+              <div class="panel-header">
+                <span class="panel-title">CRM · Hoje</span>
+                <span class="panel-tag">Honorários</span>
+              </div>
+              <div class="crm-funnel-row">
+                <span>Prospecção Ativa</span>
+                <strong style="color:#FFFFFF;">7</strong>
+              </div>
+              <div class="crm-funnel-row">
+                <span>Propostas Enviadas</span>
+                <strong style="color:#FFFFFF;">4</strong>
+              </div>
+              <div class="crm-funnel-row">
+                <span>Em Andamento</span>
+                <strong style="color:#FFFFFF;">3</strong>
+              </div>
+              <div class="crm-stat-highlight">R$ 48.720,00</div>
+              <span style="font-size: 0.74rem; color: var(--text-light-muted);">Faturamento em carteira no mês vigente.</span>
+            </div>
+
+            <!-- Panel 2: Agenda de Diligências -->
+            <div class="crm-panel-card">
+              <div class="panel-header">
+                <span class="panel-title">Agenda</span>
+                <span class="panel-tag">Compromissos</span>
+              </div>
+              <div class="agenda-item">
+                <span class="agenda-time">09:30</span>
+                <div class="agenda-desc">Audiência Cível · Vara 3ª</div>
+                <span class="agenda-status-dot" aria-hidden="true"></span>
+              </div>
+              <div class="agenda-item">
+                <span class="agenda-time">14:00</span>
+                <div class="agenda-desc">Coleta Grafotécnica ●</div>
+                <span class="agenda-status-dot" style="background:#10B981;" aria-hidden="true"></span>
+              </div>
+              <div class="agenda-item">
+                <span class="agenda-time">17:15</span>
+                <div class="agenda-desc">Alinhamento Advogado ●</div>
+                <span class="agenda-status-dot" style="background:#3B82F6;" aria-hidden="true"></span>
+              </div>
+              <div style="margin-top: 14px; font-size: 0.76rem; color: var(--gold-on-dark);">
+                ⏰ Alertas automáticos via WhatsApp e E-mail
+              </div>
+            </div>
+
+            <!-- Panel 3: Leads de Advogados -->
+            <div class="crm-panel-card">
+              <div class="panel-header">
+                <span class="panel-title">Leads · Advogados</span>
+                <span class="panel-tag">Prospecção</span>
+              </div>
+              
+              <div class="leads-bar-row">
+                <div class="leads-info">
+                  <span>OAB/MG</span>
+                  <strong>128</strong>
+                </div>
+                <div class="leads-progress" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Escritórios OAB/MG cadastrados"><div class="leads-fill" style="width: 85%;"></div></div>
+              </div>
+
+              <div class="leads-bar-row">
+                <div class="leads-info">
+                  <span>OAB/SP</span>
+                  <strong>96</strong>
+                </div>
+                <div class="leads-progress" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" aria-label="Escritórios OAB/SP cadastrados"><div class="leads-fill" style="width: 65%;"></div></div>
+              </div>
+
+              <div class="leads-bar-row">
+                <div class="leads-info">
+                  <span>OAB/RJ</span>
+                  <strong>74</strong>
+                </div>
+                <div class="leads-progress" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" aria-label="Escritórios OAB/RJ cadastrados"><div class="leads-fill" style="width: 50%;"></div></div>
+              </div>
+
+              <div style="margin-top: 18px;">
+                <a href="https://123perito.com.br/planos" target="_blank" rel="noopener noreferrer" class="btn-outline-gold" style="width:100%; border-color: var(--gold-on-dark); color: var(--gold-on-dark);" aria-label="Ver planos oficiais da plataforma 123 Perito (abre em nova janela)">
+                  Ver Planos Oficiais (a partir de R$ 9,90) →
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- TABELA DE PLANOS OFICIAIS 123 PERITO -->
+        <div class="platform-plans-wrapper">
+          <div class="platform-plans-title">
+            <h3>Planos Acessíveis Para Todas as Fases</h3>
+            <p>Escolha o plano ideal para gerenciar suas perícias, captar escritórios de advocacia e faturar com consistência. Teste por 10 dias no cartão sem compromisso.</p>
+          </div>
+
+          <div class="plans-grid">
+            
+            <!-- PLANO STARTER -->
+            <div class="plan-card">
+              <div class="plan-name">Starter</div>
+              <p class="plan-desc">Para quem está ingressando na perícia judicial e quer os primeiros clientes.</p>
+              <div class="plan-price-box">
+                <span class="plan-price-currency">R$</span>
+                <span class="plan-price-val">9,90</span>
+                <span class="plan-price-period">/mês</span>
+              </div>
+              <ul class="plan-features-list">
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Presença na Lista Nacional de Peritos</span>
+                </li>
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Lupa 123 (busca de processos) até 20x/mês</span>
+                </li>
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>CRM integrado para até 10 clientes</span>
+                </li>
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Módulo de Faturamento e Honorários</span>
+                </li>
+              </ul>
+              <a href="https://123perito.com.br/planos" target="_blank" rel="noopener noreferrer" class="plan-btn-action ghost" aria-label="Ativar 10 dias grátis no Plano Starter na 123 Perito (abre em nova janela)">
+                Ativar 10 Dias Grátis no Starter →
+              </a>
+            </div>
+
+            <!-- PLANO PRO (MAIS ESCOLHIDO) -->
+            <div class="plan-card featured">
+              <span class="plan-badge-featured">Mais Escolhido · 10 Dias Grátis</span>
+              <div class="plan-name">Pro</div>
+              <p class="plan-desc">O ecossistema completo para acelerar nomeações e captar escritórios todo mês.</p>
+              <div class="plan-price-box">
+                <span class="plan-price-currency">R$</span>
+                <span class="plan-price-val">29,90</span>
+                <span class="plan-price-period">/mês</span>
+              </div>
+              <ul class="plan-features-list">
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>30 Leads cortesia</strong> de escritórios por mês</span>
+                </li>
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>Lupa 123 Ilimitada</strong> (bancos e empresas)</span>
+                </li>
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>CRM completo para até 30 clientes</span>
+                </li>
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Calendário e agenda de perícias</span>
+                </li>
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Motor de Leads (2 buscas por mês)</span>
+                </li>
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Monitoramento de até 10 processos</span>
+                </li>
+              </ul>
+              <a href="https://123perito.com.br/planos" target="_blank" rel="noopener noreferrer" class="plan-btn-action gold" aria-label="Assinar Plano Pro com 10 dias grátis na 123 Perito (abre em nova janela)">
+                Assinar Plano Pro (10 Dias Grátis) →
+              </a>
+            </div>
+
+            <!-- PLANO PREMIUM -->
+            <div class="plan-card">
+              <div class="plan-name">Premium</div>
+              <p class="plan-desc">Máxima escala para peritos ativos com automação e inteligência artificial.</p>
+              <div class="plan-price-box">
+                <span class="plan-price-currency">R$</span>
+                <span class="plan-price-val">49,90</span>
+                <span class="plan-price-period">/mês</span>
+              </div>
+              <ul class="plan-features-list">
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Tudo incluído do Plano Pro</span>
+                </li>
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>CRM robusto para até 100 clientes</span>
+                </li>
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Motor de Leads avançado (6 buscas/mês)</span>
+                </li>
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Monitoramento DJEN diário + 20 processos</span>
+                </li>
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Chat 123 Perito com IA Forense</span>
+                </li>
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Selo Perito Destaque na Lista Nacional</span>
+                </li>
+              </ul>
+              <a href="https://123perito.com.br/planos" target="_blank" rel="noopener noreferrer" class="plan-btn-action ghost" aria-label="Contratar Plano Premium por R$ 49,90 na 123 Perito (abre em nova janela)">
+                Contratar Plano Premium →
+              </a>
+            </div>
+
+          </div>
+
+          <!-- BANNER COM LINKS DIRETOS PARA A PLATAFORMA -->
+          <div class="platform-cta-banner">
+            <div class="platform-cta-text">
+              <h4>Pronto para profissionalizar sua atuação pericial?</h4>
+              <p>Cadastre-se na plataforma oficial 123 Perito e ative seu período de 10 dias grátis no cartão.</p>
+            </div>
+            <div class="platform-cta-links">
+              <a href="https://123perito.com.br/planos" target="_blank" rel="noopener noreferrer" class="btn-gold" aria-label="Ver todos os planos e testar 10 dias grátis na 123 Perito (abre em nova janela)">
+                Ver Planos e Testar 10 Dias Grátis →
+              </a>
+              <a href="https://123perito.com.br/" target="_blank" rel="noopener noreferrer" class="btn-ghost-dark" aria-label="Acessar a plataforma oficial 123 Perito (abre em nova janela)">
+                Acessar Plataforma 123 Perito ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 04: DÚVIDAS FREQUENTES (FAQ ACCORDION) -->
+    <section id="faq" class="section-faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="faq-header">
+          <div class="kicker light-mode">04 · Esclarecimentos</div>
+          <h2 id="faq-heading">Perguntas Frequentes</h2>
+          <p class="why-lead">Entenda os detalhes práticos da atuação pericial e da assistência técnica judicial.</p>
+        </div>
+
+        <div class="faq-accordion-list">
+          
+          <div class="faq-item active">
+            <button type="button" class="faq-question-btn" id="faq-btn-1" aria-expanded="true" aria-controls="faq-panel-1">
+              <span>O que faz um perito judicial em grafotécnica e documentoscopia?</span>
+              <svg class="faq-icon-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer-panel" id="faq-panel-1" role="region" aria-labelledby="faq-btn-1">
+              <p class="faq-answer-text">
+                O perito em grafotécnica e documentoscopia verifica a autenticidade ou falsidade de assinaturas, rubricas e documentos impressos ou digitais. Através de exames morfométricos, análise de calibre, dinamismo, paradas anormais, decálquios e softwares forenses, emite laudos e pareceres técnicos conclusivos para processos judiciais e extrajudiciais.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" id="faq-btn-2" aria-expanded="false" aria-controls="faq-panel-2">
+              <span>Como contratar assistência técnica pericial para o meu processo?</span>
+              <svg class="faq-icon-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer-panel" id="faq-panel-2" role="region" aria-labelledby="faq-btn-2">
+              <p class="faq-answer-text">
+                O advogado envia os documentos questionados e os dados do processo via WhatsApp ou e-mail. Realizamos uma análise prévia de viabilidade e de inexistência de conflito de interesses. Confirmada a viabilidade, emitimos a proposta de honorários, elaboramos os quesitos estratégicos e acompanhamos todas as fases da prova pericial.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" id="faq-btn-3" aria-expanded="false" aria-controls="faq-panel-3">
+              <span>Quanto tempo leva a entrega de um parecer técnico ou quesitos?</span>
+              <svg class="faq-icon-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer-panel" id="faq-panel-3" role="region" aria-labelledby="faq-btn-3">
+              <p class="faq-answer-text">
+                Quesitos preliminares urgentes podem ser confeccionados em até 24 a 48 horas úteis para atender prazos fatais da advocacia. Pareceres completos e manifestações periciais aprofundadas seguem o calendário processual acordado diretamente com o advogado patrono da causa.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" id="faq-btn-4" aria-expanded="false" aria-controls="faq-panel-4">
+              <span>Vocês atendem processos fora de Minas Gerais e São Paulo?</span>
+              <svg class="faq-icon-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer-panel" id="faq-panel-4" role="region" aria-labelledby="faq-btn-4">
+              <p class="faq-answer-text">
+                Sim. Nossa atuação cobre todo o território nacional. Em processos com autos digitais (PJe, e-SAJ, Projudi, Eproc), a perícia e a elaboração de pareceres são realizadas com segurança criptográfica de forma remota. Quando necessária a coleta presencial de padrões ou acompanhamento de diligência física, deslocamo-nos para a comarca em qualquer estado da Federação.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" id="faq-btn-5" aria-expanded="false" aria-controls="faq-panel-5">
+              <span>Como é resguardada a ausência de conflito de interesses?</span>
+              <svg class="faq-icon-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer-panel" id="faq-panel-5" role="region" aria-labelledby="faq-btn-5">
+              <p class="faq-answer-text">
+                Antes de qualquer aceitação de encargo ou prestação de assessoria técnica, é realizada a consulta cruzada do número do processo e dos polos ativo e passivo em nosso banco de dados, em estrita conformidade com o Código de Ética e Disciplina da OAB e com os deveres de imparcialidade pericial.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 05: PRÓXIMO PASSO (DECISION CARDS) -->
+    <section class="section-decision" aria-labelledby="decision-heading">
+      <div class="container">
+        <div class="decision-header">
+          <div class="kicker light-mode">05 · Próximo Passo</div>
+          <h2 id="decision-heading">Escolha como deseja avançar</h2>
+          <p class="why-lead">Atendimento sob medida para advogados que precisam de perícia imediata ou para quem deseja construir autoridade na área.</p>
+        </div>
+
+        <div class="decision-grid">
+          
+          <!-- Decision 1: Advogados Urgentes -->
+          <div class="decision-card featured">
+            <span class="decision-kicker">Para Advogados & Departamentos Jurídicos</span>
+            <h3 class="decision-title">Tenho Caso Urgente</h3>
+            <p class="decision-desc">
+              Análise imediata de viabilidade técnica para o seu processo. Envie seu documento para triagem prévia sem compromisso e garanta quesitos ou impugnação dentro do prazo judicial fatal.
+            </p>
+            <a href="https://api.whatsapp.com/send/?phone=5534991948659&text=Sou%20ADVOGADO%2C%20caso%20urgente.%20Prazo%3A__" target="_blank" rel="noopener noreferrer" class="btn-gold" aria-label="Solicitar análise de viabilidade processual para caso urgente no WhatsApp (abre em nova janela)">
+              Solicitar Análise de Viabilidade Processual →
+            </a>
+          </div>
+
+          <!-- Decision 2: Aspirantes a Perito -->
+          <div class="decision-card">
+            <span class="decision-kicker">Para Profissionais & Peritos</span>
+            <h3 class="decision-title">Quero ser Perito</h3>
+            <p class="decision-desc">
+              Conheça o Programa 123 Perito e a plataforma de gestão. A trilha comprovada para ser nomeado nos tribunais, precificar com segurança e captar bancas de advocacia com alta recorrência.
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+              <a href="https://gustavobrasil5.hotmart.host/pagina-de-vendas-6e0d3631-c30b-48cf-b9fa-ed235b8c39d4" target="_blank" rel="noopener noreferrer" class="btn-gold" aria-label="Inscrever-se na Formação 123 Perito na Hotmart (abre em nova janela)">
+                Inscrever-se na Formação na Hotmart ↗
+              </a>
+              <a href="https://123perito.com.br/planos" target="_blank" rel="noopener noreferrer" class="btn-outline-gold" aria-label="Ativar 10 dias grátis na plataforma 123 Perito (abre em nova janela)">
+                Ativar 10 Dias Grátis na Plataforma ↗
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="contato" class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <h4>Gustavo Brasil</h4>
+          <div class="footer-brand-role">Perito Judicial · Advogado · Professor</div>
+          <p>
+            Rigor científico, segurança digital e inteligência jurídica a serviço da prova material nos tribunais do Brasil.
+          </p>
+          <div style="margin-top: 16px; font-size: 0.84rem; color: var(--gold-on-dark);">
+            📍 Uberlândia-MG · Atendimento Nacional
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Especialidades</h5>
+          <ul class="footer-links">
+            <li><a href="#assistencia">Grafotécnica Forense</a></li>
+            <li><a href="#assistencia">Documentoscopia Digital</a></li>
+            <li><a href="#assistencia">Geolocalização & Antenas ERB</a></li>
+            <li><a href="#assistencia">Análise de IPs & Conexões</a></li>
+            <li><a href="#assistencia">Biometria Facial & Liveness</a></li>
+            <li><a href="#assistencia">Impugnação de Laudo</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Ecossistema</h5>
+          <ul class="footer-links">
+            <li><a href="#assistencia">Assistência Técnica Judicial</a></li>
+            <li><a href="https://gustavobrasil5.hotmart.host/pagina-de-vendas-6e0d3631-c30b-48cf-b9fa-ed235b8c39d4" target="_blank" rel="noopener noreferrer">Formação 123 Perito (Hotmart) ↗</a></li>
+            <li><a href="https://123perito.com.br/" target="_blank" rel="noopener noreferrer">Plataforma 123 Perito ↗</a></li>
+            <li><a href="https://123perito.com.br/planos" target="_blank" rel="noopener noreferrer">Planos & Preços (10 dias grátis) ↗</a></li>
+            <li><a href="#faq">Perguntas Frequentes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Notas Técnicas</h5>
+          <p style="font-size: 0.84rem; color: var(--text-light-muted); margin-bottom: 12px;">
+            Análises exclusivas de jurisprudência pericial e casos práticos, sem spam.
+          </p>
+          <form id="newsletter-form" class="newsletter-form" novalidate>
+            <label for="newsletter-email" class="sr-only">Seu e-mail profissional para receber informativos técnicos</label>
+            <div class="newsletter-input-group">
+              <input type="email" id="newsletter-email" name="email" required placeholder="Seu e-mail profissional" class="newsletter-input" autocomplete="email" aria-describedby="newsletter-feedback">
+              <button type="submit" id="newsletter-submit-btn" class="newsletter-btn">Receber Notas</button>
+            </div>
+            <div id="newsletter-feedback" class="newsletter-feedback" role="status" aria-live="polite"></div>
+          </form>
+          <div style="margin-top: 18px; font-size: 0.8rem;">
+            <a href="mailto:contato@advgustavobrasil.com.br" style="color: var(--gold-on-dark);">
+              contato@advgustavobrasil.com.br
+            </a><br>
+            <span style="color: var(--text-light-muted);">Tel: (34) 99194-8659</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Gustavo Brasil · 123 Perito. Todos os direitos reservados. Informativo pericial e jurídico sujeito à análise prévia de viabilidade técnica e verificação de conflito de interesses.
+        </div>
+
+        <div class="footer-social-row">
+          <a href="https://api.whatsapp.com/send/?phone=5534991948659&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">WhatsApp <span class="sr-only">(abre em nova janela)</span></a>
+          <a href="https://www.instagram.com/peritobrasil" target="_blank" rel="noopener noreferrer">@peritobrasil <span class="sr-only">(abre em nova janela)</span></a>
+          <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">YouTube <span class="sr-only">(abre em nova janela)</span></a>
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn <span class="sr-only">(abre em nova janela)</span></a>
+          <a href="mailto:contato@advgustavobrasil.com.br">E-mail</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- REFINED EXECUTIVE WHATSAPP WIDGET (A11Y & BRAND ALIGNED) -->
+  <a href="https://api.whatsapp.com/send/?phone=5534991948659&text=Ol%C3%A1%2C%20Dr.%20Gustavo.%20Preciso%20de%20an%C3%A1lise%20urgente%20de%20caso." target="_blank" rel="noopener noreferrer" class="executive-wa-widget" aria-label="Plantão Pericial no WhatsApp: Resposta em até 4h úteis (abre em nova janela)">
+    <div class="wa-icon-circle" aria-hidden="true">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.155.57 4.177 1.564 5.927l-1.564 5.703 5.841-1.533c1.71.952 3.684 1.503 5.789 1.503 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z"/></svg>
+    </div>
+    <div class="wa-widget-text">
+      <span class="wa-widget-label">Plantão Pericial</span>
+      <span class="wa-widget-sub"><span class="status-dot" aria-hidden="true"></span> Resposta em até 4h</span>
+    </div>
+  </a>
+
+  <!-- GSAP 3 & SCROLLTRIGGER SCRIPTS (SYNC BEFORE INLINE EXECUTION) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- ACCORDION & GSAP INTERACTIVITY SCRIPT -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. ACCORDION LOGIC
+      const faqButtons = document.querySelectorAll('.faq-question-btn');
+      faqButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const item = btn.closest('.faq-item');
+          const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+
+          // Close other accordion items
+          document.querySelectorAll('.faq-item').forEach(other => {
+            if (other !== item) {
+              other.classList.remove('active');
+              const otherBtn = other.querySelector('.faq-question-btn');
+              if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+            }
+          });
+
+          // Toggle current
+          if (isExpanded) {
+            item.classList.remove('active');
+            btn.setAttribute('aria-expanded', 'false');
+          } else {
+            item.classList.add('active');
+            btn.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      // 2. NEWSLETTER ACCESSIBLE FORM HANDLER (CamaraUX 10632 & 10652)
+      const newsletterForm = document.getElementById('newsletter-form');
+      const newsletterFeedback = document.getElementById('newsletter-feedback');
+      const newsletterInput = document.getElementById('newsletter-email');
+      const newsletterBtn = document.getElementById('newsletter-submit-btn');
+
+      if (newsletterForm && newsletterFeedback && newsletterInput && newsletterBtn) {
+        newsletterForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const email = newsletterInput.value.trim();
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+          if (!email || !emailRegex.test(email)) {
+            newsletterFeedback.className = 'newsletter-feedback error';
+            newsletterFeedback.innerHTML = '<span>⚠️</span> Informe um e-mail corporativo válido.';
+            newsletterInput.setAttribute('aria-invalid', 'true');
+            newsletterInput.focus();
+            return;
+          }
+
+          newsletterInput.setAttribute('aria-invalid', 'false');
+          newsletterBtn.disabled = true;
+          const originalText = newsletterBtn.textContent;
+          newsletterBtn.textContent = 'Enviando...';
+          newsletterFeedback.className = 'newsletter-feedback loading';
+          newsletterFeedback.innerHTML = '<span>⏳</span> Processando inscrição...';
+
+          setTimeout(() => {
+            newsletterFeedback.className = 'newsletter-feedback success';
+            newsletterFeedback.innerHTML = '<span>✓</span> Inscrição confirmada! Você receberá os informativos.';
+            newsletterForm.reset();
+            newsletterBtn.disabled = false;
+            newsletterBtn.textContent = originalText;
+          }, 500);
+        });
+      }
+
+      // 3. COUNTER HELPER FUNCTION
+      function animateCount(elem, start, end, duration, suffix = '', formatThousands = false) {
+        let startTime = null;
+        function step(timestamp) {
+          if (!startTime) startTime = timestamp;
+          const progress = Math.min((timestamp - startTime) / duration, 1);
+          // Ease out expo
+          const easeProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+          const current = Math.floor(easeProgress * (end - start) + start);
+          const formatted = formatThousands ? current.toLocaleString('pt-BR') : current;
+          elem.textContent = formatted + suffix;
+          if (progress < 1) {
+            window.requestAnimationFrame(step);
+          } else {
+            const finalFormatted = formatThousands ? end.toLocaleString('pt-BR') : end;
+            elem.textContent = finalFormatted + suffix;
+          }
+        }
+        window.requestAnimationFrame(step);
+      }
+
+      // 3. GSAP ANIMATIONS ORCHESTRATION
+      function runGSAP() {
+        if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
+          console.warn('GSAP or ScrollTrigger not available yet, retrying...');
+          return false;
+        }
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Header scrolled class toggle on scroll
+        ScrollTrigger.create({
+          start: 'top -50',
+          end: 999999,
+          toggleClass: { className: 'scrolled', targets: '.site-header' }
+        });
+
+        // Hero Entrance Timeline
+        const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+        heroTl
+          .from('.hero-badge-sla', { y: -16, opacity: 0, duration: 0.7 })
+          .from('.hero-content .kicker', { y: 20, opacity: 0, duration: 0.65 }, '-=0.4')
+          .from('#hero-heading', { y: 28, opacity: 0, duration: 0.85 }, '-=0.45')
+          .from('.hero-lead', { y: 20, opacity: 0, duration: 0.75 }, '-=0.45')
+          .from('.hero-actions', { y: 20, opacity: 0, duration: 0.7 }, '-=0.45')
+          .from('.hero-trust-bar .trust-item', { y: 14, opacity: 0, stagger: 0.08, duration: 0.55 }, '-=0.35')
+          .from('.hero-portrait-frame', { scale: 0.94, y: 30, opacity: 0, duration: 1.1 }, '-=0.7');
+
+        // Floating 3-Cards Ribbon (Staggered Entrance)
+        const ribbonCards = document.querySelectorAll('.ribbon-card');
+        if (ribbonCards.length > 0) {
+          gsap.from(ribbonCards, {
+            scrollTrigger: {
+              trigger: '.ribbon-section',
+              start: 'top 88%',
+              toggleActions: 'play none none none'
+            },
+            immediateRender: false,
+            y: 45,
+            opacity: 0,
+            duration: 0.85,
+            stagger: 0.15,
+            ease: 'power2.out'
+          });
+        }
+
+        // Section Why: Content & Mosaic
+        const whyContent = document.querySelector('.why-content');
+        if (whyContent) {
+          gsap.from(whyContent, {
+            scrollTrigger: {
+              trigger: '.section-why',
+              start: 'top 85%',
+              toggleActions: 'play none none none'
+            },
+            immediateRender: false,
+            x: -35,
+            opacity: 0,
+            duration: 0.85,
+            ease: 'power3.out'
+          });
+        }
+
+        const featCards = document.querySelectorAll('.feat-card');
+        if (featCards.length > 0) {
+          gsap.from(featCards, {
+            scrollTrigger: {
+              trigger: '.why-features-grid',
+              start: 'top 88%',
+              toggleActions: 'play none none none'
+            },
+            immediateRender: false,
+            y: 25,
+            opacity: 0,
+            stagger: 0.1,
+            duration: 0.7,
+            ease: 'power2.out'
+          });
+        }
+
+        const mosaicImg = document.querySelector('.mosaic-main-img');
+        if (mosaicImg) {
+          gsap.from(mosaicImg, {
+            scrollTrigger: {
+              trigger: '.why-mosaic-col',
+              start: 'top 85%',
+              toggleActions: 'play none none none'
+            },
+            immediateRender: false,
+            scale: 0.95,
+            opacity: 0,
+            duration: 0.95,
+            ease: 'power3.out'
+          });
+        }
+
+        const quoteBox = document.querySelector('.mosaic-quote-box');
+        if (quoteBox) {
+          gsap.from(quoteBox, {
+            scrollTrigger: {
+              trigger: '.mosaic-quote-box',
+              start: 'top 92%',
+              toggleActions: 'play none none none'
+            },
+            immediateRender: false,
+            x: 30,
+            opacity: 0,
+            duration: 0.8,
+            delay: 0.2,
+            ease: 'power2.out'
+          });
+        }
+
+        // Numbers Counter Animation
+        const statItems = document.querySelectorAll('.stats-bar-section .stat-number');
+        if (statItems.length >= 4) {
+          ScrollTrigger.create({
+            trigger: '.stats-bar-section',
+            start: 'top 88%',
+            once: true,
+            onEnter: () => {
+              animateCount(statItems[0], 0, 18, 1200, '+');
+              animateCount(statItems[1], 0, 3000, 1600, '+', true);
+              animateCount(statItems[2], 0, 1000, 1500, '+', true);
+              gsap.from(statItems[3], { scale: 0.4, opacity: 0, duration: 0.7, ease: 'back.out(2)' });
+            }
+          });
+        }
+
+        // 3 Pillars
+        const pillars = document.querySelectorAll('.pillar-card');
+        if (pillars.length > 0) {
+          gsap.from(pillars, {
+            scrollTrigger: {
+              trigger: '.pillars-grid',
+              start: 'top 88%',
+              toggleActions: 'play none none none'
+            },
+            immediateRender: false,
+            y: 40,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.14,
+            ease: 'power2.out'
+          });
+        }
+
+        // 5 Specialized Service Cards
+        const serviceCards = document.querySelectorAll('.scard');
+        if (serviceCards.length > 0) {
+          gsap.from(serviceCards, {
+            scrollTrigger: {
+              trigger: '.service-cards-5',
+              start: 'top 88%',
+              toggleActions: 'play none none none'
+            },
+            immediateRender: false,
+            y: 35,
+            opacity: 0,
+            duration: 0.75,
+            stagger: 0.09,
+            ease: 'power2.out'
+          });
+        }
+
+        // Workflow 4 Steps
+        const wfSteps = document.querySelectorAll('.wf-step');
+        if (wfSteps.length > 0) {
+          gsap.from(wfSteps, {
+            scrollTrigger: {
+              trigger: '.workflow-steps-grid',
+              start: 'top 88%',
+              toggleActions: 'play none none none'
+            },
+            immediateRender: false,
+            y: 28,
+            opacity: 0,
+            duration: 0.7,
+            stagger: 0.1,
+            ease: 'power2.out'
+          });
+        }
+
+        // Formação 123 Perito Pills & Card
+        const curriculumPills = document.querySelectorAll('.curriculum-pill');
+        if (curriculumPills.length > 0) {
+          gsap.from(curriculumPills, {
+            scrollTrigger: {
+              trigger: '.curriculum-pills',
+              start: 'top 88%',
+              toggleActions: 'play none none none'
+            },
+            immediateRender: false,
+            scale: 0.82,
+            opacity: 0,
+            stagger: 0.05,
+            duration: 0.5,
+            ease: 'back.out(1.5)'
+          });
+        }
+
+        const trainingCard = document.querySelector('.training-features-card');
+        if (trainingCard) {
+          gsap.from(trainingCard, {
+            scrollTrigger: {
+              trigger: '.training-features-card',
+              start: 'top 85%',
+              toggleActions: 'play none none none'
+            },
+            immediateRender: false,
+            x: 35,
+            opacity: 0,
+            duration: 0.85,
+            ease: 'power3.out'
+          });
+        }
+
+        // Platform CRM Mockup
+        const crmMockup = document.querySelector('.crm-mockup-frame');
+        if (crmMockup) {
+          gsap.from(crmMockup, {
+            scrollTrigger: {
+              trigger: '.section-platform',
+              start: 'top 80%',
+              toggleActions: 'play none none none'
+            },
+            immediateRender: false,
+            y: 45,
+            opacity: 0,
+            duration: 0.9,
+            ease: 'power3.out'
+          });
+        }
+
+        // Platform Official 3 Plans Cards
+        const planCards = document.querySelectorAll('.plan-card');
+        if (planCards.length > 0) {
+          gsap.from(planCards, {
+            scrollTrigger: {
+              trigger: '.plans-grid',
+              start: 'top 88%',
+              toggleActions: 'play none none none'
+            },
+            immediateRender: false,
+            y: 40,
+            opacity: 0,
+            stagger: 0.14,
+            duration: 0.85,
+            ease: 'power3.out'
+          });
+        }
+
+        const platformCta = document.querySelector('.platform-cta-banner');
+        if (platformCta) {
+          gsap.from(platformCta, {
+            scrollTrigger: {
+              trigger: '.platform-cta-banner',
+              start: 'top 92%',
+              toggleActions: 'play none none none'
+            },
+            immediateRender: false,
+            y: 25,
+            opacity: 0,
+            duration: 0.7,
+            ease: 'power2.out'
+          });
+        }
+
+        // FAQ Items
+        const faqItems = document.querySelectorAll('.faq-item');
+        if (faqItems.length > 0) {
+          gsap.from(faqItems, {
+            scrollTrigger: {
+              trigger: '.faq-accordion-list',
+              start: 'top 88%',
+              toggleActions: 'play none none none'
+            },
+            immediateRender: false,
+            y: 25,
+            opacity: 0,
+            stagger: 0.08,
+            duration: 0.6,
+            ease: 'power2.out'
+          });
+        }
+
+        // Decision Split Cards
+        const decisionCards = document.querySelectorAll('.decision-card');
+        if (decisionCards.length > 0) {
+          gsap.from(decisionCards, {
+            scrollTrigger: {
+              trigger: '.decision-grid',
+              start: 'top 88%',
+              toggleActions: 'play none none none'
+            },
+            immediateRender: false,
+            y: 40,
+            opacity: 0,
+            stagger: 0.18,
+            duration: 0.85,
+            ease: 'power2.out'
+          });
+        }
+
+        // Footer Stagger
+        const footerCols = document.querySelectorAll('.site-footer .footer-col, .site-footer .footer-brand');
+        if (footerCols.length > 0) {
+          gsap.from(footerCols, {
+            scrollTrigger: {
+              trigger: '.site-footer',
+              start: 'top 92%',
+              toggleActions: 'play none none none'
+            },
+            immediateRender: false,
+            y: 25,
+            opacity: 0,
+            stagger: 0.1,
+            duration: 0.7,
+            ease: 'power2.out'
+          });
+        }
+
+        // Refresh triggers on init and window load
+        ScrollTrigger.refresh();
+        window.addEventListener('load', () => ScrollTrigger.refresh());
+        return true;
+      }
+
+      // Safe execution with retry
+      if (!runGSAP()) {
+        let attempts = 0;
+        const interval = setInterval(() => {
+          attempts++;
+          if (runGSAP() || attempts > 25) {
+            clearInterval(interval);
+          }
+        }, 120);
+      }
+    });
+  </script>
+</body>
+</html>
