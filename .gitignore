@@ -4,3 +4,13 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Tastegate artifacts (screenshots + report, regeneraveis via scripts/gate.py)
+.tastegate/
+
+# Film render artifacts (regeneraveis via promo-motion render.cjs + brief em film/)
+film/stills/
+film/contact-sheet.png
+film/flow-title-check.png
+film/*.mp4
+film/*.wav

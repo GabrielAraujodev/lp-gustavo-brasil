@@ -1,0 +1,16 @@
+{
+  "width": 1920, "height": 1080, "fps": 30, "grain": 9,
+  "hud": { "left": "123 PERITO / FILME DE LANÇAMENTO", "right": "123PERITO.COM.BR" },
+  "score": { "key": "D", "mood": "dark" },
+  "beats": [
+    { "scene": "hud-intro", "dur": 1.6, "tag": "PERÍCIA 001", "label": "signal" },
+    { "scene": "wordmark", "dur": 1.6, "name": "123 PERITO", "sub": "gestão forense", "label": "wordmark" },
+    { "scene": "wave-grid", "dur": 1.8, "title": "Casos, agenda e honorários.", "label": "wave", "in": "wipe" },
+    { "scene": "kinetic-word", "dur": 1.1, "word": "3.000", "label": "number" },
+    { "scene": "kinetic-word", "dur": 1.1, "word": "LAUDOS", "mode": "stack", "label": "unit" },
+    { "scene": "flow-field", "dur": 2.0, "title": "em 18 anos.", "label": "flow", "breath": true },
+    { "scene": "ui-card", "dur": 2.6, "title": "123 Perito OS", "rows": ["Prazos sob controle", "Honorários em carteira"], "button": "Ativar 10 dias grátis  →", "label": "ui" },
+    { "scene": "blob-iris", "dur": 1.6, "label": "blob" },
+    { "scene": "wordmark", "dur": 2.0, "name": "123 Perito", "sub": "gestão forense", "bg": "#0B0E14", "color": "#EFEBE3", "dot": "#FF4D1A", "tag": "123PERITO.COM.BR/PLANOS", "label": "end" }
+  ]
+}
