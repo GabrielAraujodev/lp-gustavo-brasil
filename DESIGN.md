@@ -137,11 +137,11 @@ Matriz completa de estados interativos para os componentes principais:
 
 | Componente | Default | Hover | Active / Click | Focus-Visible (Teclado) | Disabled / Loading | Error / Invalid | Success |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Botão Primário (`.btn-gold`)** | Fundo `#DFC5A2` degradê, texto `#080D14`, sombra dourada sutil | `translateY(-2px)`, sombra `0 6px 20px rgba(197,168,128,0.4)` | `translateY(0)`, escala `0.98` | Anel 3px `#DFC5A2`, offset 3px, raio 4px | Opacidade 0.65, cursor `not-allowed`, texto "Enviando..." | N/A | N/A |
-| **Botão Fantasma (`.btn-ghost-dark`)** | Borda 1px `#334155`, texto `#FAF8F5`, fundo transparente | Fundo `rgba(255,255,255,0.06)`, borda `#DFC5A2` | Escala `0.98` | Anel 3px `#DFC5A2`, offset 3px | Opacidade 0.5 | N/A | N/A |
-| **Card de Planos (`.plan-card`)** | Fundo `#0E1622`, borda 1px branca 10%, raio 4px | `translateY(-5px)`, borda dourada, sombra 36px | Foco interno nos links | Anel 3px `#DFC5A2` nos links internos | N/A | N/A | Destaque Pro com badge superior |
+| **Botão Primário (`.btn-gold`)** | Fundo `#DFC5A2` degradê, texto `#080D14`, sombra dourada sutil | Fundo dourado levemente mais claro, sem deslocamento | Estado pressionado discreto | Anel 3px `#DFC5A2`, offset 3px, raio 4px | Opacidade 0.65, cursor `not-allowed`, texto "Enviando..." | N/A | N/A |
+| **Botão Fantasma (`.btn-ghost-dark`)** | Borda 1px `#334155`, texto `#FAF8F5`, fundo transparente | Fundo e borda discretamente realçados, sem deslocamento | Estado pressionado discreto | Anel 3px `#DFC5A2`, offset 3px | Opacidade 0.5 | N/A | N/A |
+| **Card de Planos (`.plan-card`)** | Fundo `#0E1622`, borda 1px branca 10%, raio 4px | Sem efeito no card; feedback apenas no link de ação | Foco interno nos links | Anel 3px `#DFC5A2` nos links internos | N/A | N/A | Destaque Pro com badge superior |
 | **FAQ Accordion (`.faq-item`)** | Painel fechado (altura 0), chevron apontando para baixo | Borda sutilmente dourada | Transição suave `max-height 0.35s` | Anel 3px `#78531C` no botão de pergunta | N/A | N/A | Painel aberto com padding e borda dourada |
-| **Formulário Newsletter (`.newsletter-form`)** | Input `#0E1622` borda cinza, botão dourado | Borda sutil clareada | Input ativo | Anel 3px dourado no input e no botão | Botão desabilitado com spinner/texto "Enviando..." | Borda vermelha `#EF4444`, texto acessível `aria-live="polite"` | Mensagem verde `#34D399` com checkmark, input limpo |
+| **Solicitação de notas técnicas (`.newsletter-form`)** | Input `#0E1622` borda cinza, botão dourado | Borda sutil clareada | Prepara mensagem no aplicativo de e-mail | Anel 3px dourado no input e no botão | N/A | Borda vermelha `#EF4444`, texto acessível `aria-live="polite"` | Instrução inline para enviar o e-mail; não confirmar inscrição sem integração |
 
 ---
 
@@ -162,7 +162,7 @@ Auditado sob as diretrizes **W3C WCAG 2.2 Nível AAA**.
 - **Zero interferência com cliques de mouse**: Implementado estritamente via pseudo-classe `:focus-visible`.
 
 ### 6.3. Feedback Dinâmico Acessível (CamaraUX 10632 & 10652)
-- O formulário de newsletter e demais entradas não utilizam janelas nativas bloqueantes (`alert()`, `confirm()`).
+- O formulário de notas técnicas prepara uma solicitação por e-mail; não afirma que houve inscrição automática.
 - O retorno é anunciado em tempo real para tecnologias assistivas via elemento `#newsletter-feedback` dotado de `role="status"` e `aria-live="polite"`.
 
 ---
@@ -171,15 +171,16 @@ Auditado sob as diretrizes **W3C WCAG 2.2 Nível AAA**.
 
 ### 7.1. Breakpoints e Adaptações
 - **Mobile (< 640px)**:
-  - Hero colapsa para coluna única; tipografia fluida via `clamp(2.3rem, 1.6rem + 2.8vw, 3.8rem)`.
-  - Grid de 3 cards da Ribbon torna-se vertical com scroll natural.
+  - Cabeçalho compacto no celular e no tablet com marca e acesso direto ao contato; as seções continuam acessíveis pela rolagem e pelos links internos da página.
+  - Hero mantém o retrato ao lado do título; descrição e CTAs ocupam a largura total no celular.
+  - Índice editorial de três serviços torna-se vertical com scroll natural.
   - Tabela de planos se organiza em cards empilhados com destaque visual mantido para o Plano Pro.
   - Touch targets de todos os botões e links garantem área mínima de toque de **48x48px**.
 - **Tablet (641px – 1024px)**:
   - Grids colapsam para 2 colunas com alinhamento simétrico.
   - Mockup do CRM ajusta scroll interno com preservação de métricas.
 - **Desktop (1025px+)**:
-  - Layout completo editorial com grid balanceado 1.15fr / 0.85fr no Hero e 3 colunas harmoniosas na Ribbon e nos Planos.
+  - Layout editorial com grid balanceado 1.08fr / 0.92fr no Hero e 3 colunas na Ribbon e nos Planos.
 
 ---
 
@@ -191,9 +192,9 @@ Critérios explícitos para evitar regressões visuais e IA Slop:
 | :--- | :--- | :--- |
 | **Feedback de Formulário** | Usar `alert('Inscrição confirmada!')` | Usar container inline com `role="status"` e `aria-live="polite"` |
 | **Foco de Teclado** | `outline: none;` sem substituição | `:focus-visible` com anel contrastante de 3px e offset de 3px |
-| **Imagens e Cenografia** | Martelos de madeira estrangeiros (gavels), bandeiras dos EUA, togas inglesas | Bandeira do Brasil, Palácio da Justiça (TJSP), selos notariais paulistas, microscópio forense real |
-| **Interface do CRM** | 3 bolinhas coloridas clássicas de janela macOS (clichê de IA) | Topbar técnica com badge "SaaS Forense", "Conexão Criptografada 256-bit" e métricas do DJEN |
-| **Motion & Animação** | Bloquear conteúdo com `opacity: 0` se o JS ou CDN de GSAP falhar | Animar exclusivamente com `immediateRender: false`, degradação graciosa com conteúdo visível no HTML puro |
+| **Imagens e Cenografia** | Martelos de madeira estrangeiros (gavels), bandeiras dos EUA, togas inglesas | Retrato profissional e imagem do trabalho pericial; índice de serviços sem imagens genéricas |
+| **Interface do CRM** | Métricas demonstrativas apresentadas como resultados reais | Topbar com aviso de prévia ilustrativa e dados de exemplo; sem faturamento inventado |
+| **Motion & Animação** | Bloquear conteúdo com `opacity: 0` se o JS ou CDN de GSAP falhar | Manter conteúdo visível no HTML puro e animar apenas acentos leves; respeitar movimento reduzido |
 
 ---
 

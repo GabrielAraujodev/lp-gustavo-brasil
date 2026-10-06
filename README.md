@@ -11,14 +11,15 @@ Landing page de alta conversão, autoridade jurídica e sofisticação editorial
 ## 🏛️ Destaques do Projeto
 
 - **Estética Editorial Luxury Forense**: Bipolaridade cromática intencional — *Dark Realm* no Hero para solenidade e sobriedade de corte superior, e *Warm Alabaster Realm* no corpo para clareza probatória inspirada em papel pergaminho de autos e laudos autenticados.
-- **Zero AI Slop**: Fotografia e arquitetura 100% alinhadas à realidade jurídica brasileira — Palácio da Justiça (TJSP com bandeira nacional), contratos de prestação de serviços com selos notariais paulistas, fotografias em microscopia óptica forense real e sem clichês estrangeiros (sem gavels ou bolinhas macOS).
+- **Direção editorial**: Faixa de serviços tipográfica, retrato profissional em destaque e prévia do CRM identificada como ilustrativa. A página evita imagens jurídicas genéricas e métricas de faturamento sem contexto.
 - **Acessibilidade WCAG 2.2 Nível AAA**:
   - Contraste cromático auditado (> 16:1 para textos principais, > 5.1:1 para acentos no claro).
   - Anel de foco de teclado contextual (`:focus-visible` com 3px de contorno e 3px de offset).
-  - Formulário com feedback acessível em tempo real (`role="status"`, `aria-live="polite"`), sem bloqueio por `alert()` nativo.
+  - Solicitação de notas técnicas por e-mail com feedback acessível em tempo real (`role="status"`, `aria-live="polite"`), sem confirmação fictícia de inscrição.
   - Skip-link funcional e touch targets >= 48px para mobile.
 - **Motion System (GSAP 3 & ScrollTrigger)**:
-  - Animações escalonadas de entrada, elevação suave de cards e contadores numéricos progressivos.
+  - Chegada sutil do retrato na hero e destaque sequencial das etapas da atuação pericial.
+  - Indicadores numéricos permanecem legíveis e estáticos.
   - Degradação graciosa: renderização garantida mesmo se o JavaScript ou CDN estiverem indisponíveis.
   - Suporte completo a `prefers-reduced-motion: reduce`.
 - **Integração do Ecossistema 123 Perito**:

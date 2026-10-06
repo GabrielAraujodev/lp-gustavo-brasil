@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#080D14">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:title" content="Dr. Gustavo Brasil — O Laudo que Sustenta a sua Tese em Juízo">
+  <meta property="og:title" content="Dr. Gustavo Brasil — Prova Técnica para sua Tese em Juízo">
   <meta property="og:description" content="Assistência técnica em grafotécnica, documentoscopia digital, geolocalização, IP e biometria facial. Quesitos precisos, parecer fundamentado e impugnação consistente.">
   <meta property="og:image" content="assets/gustavo_brasil_hero.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -149,6 +149,15 @@
       font-size: 16px;
     }
 
+    [id] {
+      scroll-margin-top: 100px;
+    }
+
+    ::selection {
+      background: var(--gold-primary);
+      color: var(--bg-dark);
+    }
+
     body {
       background-color: var(--bg-light);
       color: var(--text-dark-primary);
@@ -157,6 +166,10 @@
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       overflow-x: hidden;
+    }
+
+    input {
+      caret-color: var(--gold-on-dark);
     }
 
     /* ACCESSIBILITY: SKIP LINK */
@@ -226,7 +239,7 @@
     a {
       color: inherit;
       text-decoration: none;
-      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
     }
 
     button {
@@ -234,7 +247,7 @@
       cursor: pointer;
       border: none;
       background: none;
-      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
     }
 
     .container {
@@ -281,7 +294,7 @@
       background: var(--gold-deep-accessible);
     }
 
-    /* tastegate: section-label replaces excess eyebrow kickers (max 3 eyebrows per page) */
+    /* Editorial labels are reserved for the main service and product sections. */
     .section-label {
       display: inline-flex;
       align-items: center;
@@ -344,11 +357,7 @@
     }
 
     .btn-gold:hover {
-      transform: translateY(-2px) scale(1.015);
-      box-shadow: var(--shadow-gold), var(--glow-red-subtle);
       background: linear-gradient(135deg, #F0DBBC 0%, #D8BE96 50%, #B69260 100%);
-      color: #000;
-      border-color: rgba(225, 29, 46, 0.45);
     }
 
     .btn-ghost-dark {
@@ -373,8 +382,6 @@
     .btn-ghost-dark:hover {
       background: rgba(197, 168, 128, 0.15);
       border-color: var(--gold-on-dark);
-      transform: translateY(-2px);
-      color: #fff;
     }
 
     .btn-outline-gold {
@@ -397,7 +404,6 @@
     .btn-outline-gold:hover {
       background: var(--gold-deep-accessible);
       color: #FAF8F5;
-      transform: translateY(-1px);
     }
 
     /* HEADER & NAVIGATION */
@@ -408,12 +414,12 @@
       background: rgba(8, 13, 20, 0.96);
       backdrop-filter: blur(14px);
       border-bottom: 1px solid rgba(197, 168, 128, 0.18);
-      transition: all 0.3s ease;
+      transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     }
 
     .site-header.scrolled {
       background: rgba(6, 10, 16, 0.98);
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.75);
+      box-shadow: 0 8px 26px rgba(0, 0, 0, 0.28);
       border-bottom-color: rgba(197, 168, 128, 0.35);
     }
 
@@ -421,25 +427,26 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 32px;
-      min-height: 78px;
+      gap: 18px;
+      min-height: 84px;
       max-width: 1240px;
       margin: 0 auto;
-      padding: 14px clamp(20px, 4vw, 48px);
+      padding: 12px clamp(20px, 4vw, 48px);
     }
 
     .brand-logo-block {
       display: flex;
       flex-direction: column;
       padding: 6px 0;
-      margin-right: 12px;
+      flex-shrink: 0;
+      white-space: nowrap;
     }
 
     .brand-name {
       font-family: var(--font-display);
-      font-size: 1.25rem;
+      font-size: 1.08rem;
       font-weight: 700;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.1em;
       color: #FAF8F5;
       line-height: 1.1;
       text-transform: uppercase;
@@ -447,8 +454,8 @@
 
     .brand-sub {
       font-family: var(--font-body);
-      font-size: 0.65rem;
-      letter-spacing: 0.22em;
+      font-size: 0.69rem;
+      letter-spacing: 0.09em;
       color: var(--gold-on-dark);
       text-transform: uppercase;
       font-weight: 600;
@@ -458,29 +465,36 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 2px;
       list-style: none;
     }
 
+    .nav-cta-mobile-label {
+      display: none;
+    }
+
     .nav-links a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
       font-family: var(--font-body);
-      font-size: 0.78rem;
+      font-size: 0.85rem;
       font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
+      letter-spacing: 0.01em;
       color: var(--text-light-secondary);
       position: relative;
-      padding: 12px 14px;
+      padding: 10px 9px;
       border-radius: var(--radius-sm);
-      line-height: 1.2;
+      line-height: 1.3;
+      white-space: nowrap;
     }
 
     .nav-links a::after {
       content: '';
       position: absolute;
-      bottom: 6px;
-      left: 14px;
-      right: 14px;
+      bottom: 3px;
+      left: 9px;
+      right: 9px;
       width: auto;
       height: 2px;
       background: var(--gold-on-dark);
@@ -490,12 +504,16 @@
     }
 
     .nav-links a:hover {
-      color: #FFFFFF;
-      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-light-primary);
     }
 
-    .nav-links a:hover::after {
+    .nav-links a:hover::after,
+    .nav-links a[aria-current="location"]::after {
       transform: scaleX(1);
+    }
+
+    .nav-links a[aria-current="location"] {
+      color: var(--gold-on-dark);
     }
 
     .nav-cta-btn {
@@ -503,42 +521,25 @@
       display: inline-flex;
       align-items: center;
       gap: 9px;
-      padding: 12px 22px;
-      min-height: 46px;
+      padding: 12px 18px;
+      min-height: 48px;
       border-radius: var(--radius-sm);
       background: var(--gold-gradient);
       color: #080D14;
-      font-size: 0.76rem;
+      font-size: 0.8rem;
       font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      border: 1px solid rgba(255, 255, 255, 0.28);
-      box-shadow: 0 4px 16px rgba(197, 168, 128, 0.28), 0 0 0 1px rgba(225, 29, 46, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.35);
-      overflow: hidden;
-      isolation: isolate;
-      transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s ease, background 0.22s ease;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+      transition: background 0.2s ease;
     }
 
     .nav-cta-btn::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      z-index: -1;
-      background: linear-gradient(105deg, transparent 30%, rgba(255, 255, 255, 0.45) 48%, rgba(225, 29, 46, 0.22) 52%, transparent 70%);
-      transform: translateX(-110%);
-      transition: transform 0.7s ease;
-      pointer-events: none;
+      content: none;
     }
 
     .nav-cta-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(197, 168, 128, 0.38), 0 0 20px rgba(225, 29, 46, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.4);
       background: linear-gradient(135deg, #F0DBBC 0%, #D8BE96 50%, #B69260 100%);
-      color: #000;
-    }
-
-    .nav-cta-btn:hover::before {
-      transform: translateX(110%);
     }
 
     .nav-cta-btn:active {
@@ -567,14 +568,7 @@
       height: 8px;
       border-radius: 50%;
       background: var(--status-online);
-      box-shadow: 0 0 8px var(--status-online);
       display: inline-block;
-      animation: pulseDot 2s infinite;
-    }
-
-    @keyframes pulseDot {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(0.85); }
     }
 
     /* HERO SECTION */
@@ -582,8 +576,8 @@
       background-color: var(--bg-dark);
       position: relative;
       overflow: hidden;
-      padding-top: clamp(40px, 6vw, 70px);
-      padding-bottom: clamp(100px, 12vw, 150px);
+      padding-top: clamp(64px, 7vw, 104px);
+      padding-bottom: clamp(112px, 12vw, 160px);
       border-bottom: 1px solid rgba(197, 168, 128, 0.15);
     }
 
@@ -596,56 +590,41 @@
       background-image: url('assets/hero_bg.webp');
       background-size: cover;
       background-position: center right;
-      opacity: 0.42;
-      filter: contrast(1.1) brightness(0.9);
+      opacity: 0.34;
+      filter: contrast(1.05) brightness(0.82);
       pointer-events: none;
     }
 
     .hero-bg-gradient {
       position: absolute;
       inset: 0;
-      background: linear-gradient(90deg, #080D14 0%, #080D14 42%, rgba(8, 13, 20, 0.88) 58%, rgba(8, 13, 20, 0.35) 100%),
-                  linear-gradient(0deg, #080D14 0%, transparent 25%);
+      background: linear-gradient(90deg, #080D14 0%, #080D14 38%, rgba(8, 13, 20, 0.87) 60%, rgba(8, 13, 20, 0.50) 100%),
+                  linear-gradient(0deg, #080D14 0%, transparent 32%);
       pointer-events: none;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: clamp(32px, 5vw, 64px);
+      grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+      gap: clamp(24px, 4vw, 56px);
       align-items: center;
       position: relative;
       z-index: 2;
     }
 
     .hero-content {
-      max-width: 680px;
-    }
-
-    .hero-badge-sla {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(14, 22, 34, 0.88);
-      border: 1px solid var(--border-gold-subtle);
-      padding: 7px 16px;
-      border-radius: var(--radius-full);
-      font-size: 0.74rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--text-light-secondary);
-      margin-bottom: 20px;
+      max-width: 700px;
     }
 
     .hero-title {
       font-family: var(--font-display);
-      font-size: clamp(2.3rem, 1.6rem + 2.8vw, 3.8rem);
-      line-height: 1.08;
+      font-size: clamp(2.6rem, 1.65rem + 3.1vw, 4.25rem);
+      line-height: 1.13;
       font-weight: 700;
-      color: #FAF8F5;
-      text-transform: uppercase;
-      letter-spacing: 0.02em;
-      margin-bottom: 22px;
+      color: var(--text-light-primary);
+      letter-spacing: -0.025em;
+      margin-bottom: 28px;
+      text-wrap: balance;
     }
 
     .hero-title .gold-accent {
@@ -654,50 +633,47 @@
       text-transform: none;
       font-style: italic;
       font-weight: 600;
-      display: inline-block;
+      display: block;
+      letter-spacing: -0.02em;
     }
 
     .hero-lead {
       color: var(--text-light-secondary);
-      font-size: clamp(1rem, 0.94rem + 0.35vw, 1.15rem);
-      line-height: 1.7;
-      margin-bottom: 34px;
-      max-width: 580px;
-    }
-
-    /* story-hooks: hook #1 como subhead do hero (H1 intacto) */
-    .hero-hook {
-      color: var(--gold-on-dark);
-      font-family: var(--font-body);
-      font-size: clamp(1rem, 0.94rem + 0.35vw, 1.15rem);
-      font-weight: 700;
-      line-height: 1.55;
-      margin: 0 0 14px;
-      max-width: 580px;
+      font-size: clamp(1rem, 0.96rem + 0.3vw, 1.125rem);
+      line-height: 1.66;
+      margin-bottom: 30px;
+      max-width: 58ch;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 16px;
+      gap: 12px;
       align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .hero-response {
+      color: var(--text-light-muted);
+      font-size: 0.8rem;
+      line-height: 1.5;
       margin-bottom: 36px;
     }
 
     .hero-trust-bar {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
-      padding-top: 24px;
+      gap: 12px 26px;
+      padding-top: 22px;
       border-top: 1px solid rgba(255, 255, 255, 0.1);
       font-size: 0.82rem;
-      color: var(--text-light-muted);
+      color: var(--text-light-secondary);
     }
 
     .trust-item {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
     }
 
     .trust-item svg {
@@ -716,7 +692,7 @@
     .hero-portrait-frame {
       position: relative;
       width: 100%;
-      max-width: 440px;
+      max-width: 480px;
       display: flex;
       justify-content: center;
     }
@@ -727,8 +703,8 @@
       bottom: 0;
       width: 85%;
       height: 70%;
-      background: radial-gradient(circle, rgba(197, 168, 128, 0.22) 0%, rgba(8, 13, 20, 0) 70%);
-      filter: blur(28px);
+      background: radial-gradient(circle, rgba(197, 168, 128, 0.15) 0%, rgba(8, 13, 20, 0) 70%);
+      filter: blur(22px);
       z-index: 0;
     }
 
@@ -748,11 +724,9 @@
       z-index: 2;
       background: rgba(14, 22, 34, 0.94);
       border: 1px solid var(--border-gold-subtle);
-      border-left: 4px solid var(--gold-on-dark);
       padding: 12px 18px;
       border-radius: var(--radius-sm);
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-      backdrop-filter: blur(10px);
     }
 
     .tag-title {
@@ -771,75 +745,45 @@
       letter-spacing: 0.05em;
     }
 
-    /* FLOATING 3-CARD RIBBON (BRAZILIAN JUDICIAL THEMES) */
+    /* Editorial service index */
     .ribbon-section {
       position: relative;
-      margin-top: -85px;
+      margin-top: -32px;
       z-index: 10;
-      padding-bottom: 70px;
+      padding-bottom: 48px;
     }
 
     .ribbon-grid {
       display: grid;
-      grid-template-columns: 1.18fr 1fr 0.94fr;
-      gap: 24px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0;
       align-items: stretch;
+      background: var(--bg-light-surface);
+      border-top: 2px solid var(--gold-primary);
+      box-shadow: var(--shadow-card);
     }
 
     .ribbon-card {
-      background: var(--bg-light-surface);
-      border: 1px solid var(--border-light);
-      border-radius: var(--radius-sm);
-      overflow: hidden;
-      box-shadow: var(--shadow-elevated);
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
       display: flex;
       flex-direction: column;
+      min-width: 0;
+      border-right: 1px solid var(--border-light);
     }
 
-    .ribbon-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 25px 50px rgba(15, 23, 34, 0.14), 0 0 0 1px rgba(225, 29, 46, 0.22), 0 0 26px rgba(124, 58, 237, 0.14);
-      border-color: rgba(225, 29, 46, 0.45);
+    .ribbon-card:last-child {
+      border-right: 0;
     }
 
-    .card-media {
-      position: relative;
-      height: 200px;
-      overflow: hidden;
-      background: #0E1622;
-    }
-
-    .card-media img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .ribbon-card:hover .card-media img {
-      transform: scale(1.06);
-    }
-
-    .card-icon-badge {
-      position: absolute;
-      bottom: -22px;
-      left: 24px;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: #080D14;
-      border: 1px solid var(--gold-on-dark);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--gold-on-dark);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-      z-index: 2;
+    .card-index {
+      font-family: var(--font-editorial);
+      font-size: 1.7rem;
+      line-height: 1;
+      color: var(--gold-deep-accessible);
+      margin-bottom: 20px;
     }
 
     .card-body {
-      padding: 34px 26px 26px;
+      padding: 30px 28px 28px;
       flex: 1;
       display: flex;
       flex-direction: column;
@@ -881,7 +825,6 @@
     .card-action-link:hover {
       color: var(--text-dark-primary);
       border-color: var(--text-dark-primary);
-      gap: 10px;
     }
 
     /* SECTION: POR QUE GUSTAVO BRASIL (COM FOTO REAL NO MICROSCÓPIO) */
@@ -1132,17 +1075,10 @@
       border-radius: var(--radius-sm);
       border: 1px solid var(--border-light);
       text-align: center;
-      transition: all 0.3s ease;
       box-shadow: var(--shadow-card);
       display: flex;
       flex-direction: column;
       align-items: center;
-    }
-
-    .pillar-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow-elevated);
-      border-color: var(--gold-deep-accessible);
     }
 
     .pillar-circle-icon {
@@ -1155,14 +1091,7 @@
       justify-content: center;
       color: var(--gold-deep-accessible);
       margin-bottom: 24px;
-      transition: all 0.3s ease;
       background: var(--bg-light);
-    }
-
-    .pillar-card:hover .pillar-circle-icon {
-      background: #080D14;
-      color: var(--gold-on-dark);
-      border-color: #080D14;
     }
 
     .pillar-title {
@@ -1216,7 +1145,6 @@
       border: 1px solid var(--border-light);
       padding: 32px 28px;
       border-radius: var(--radius-sm);
-      transition: all 0.25s ease;
       display: flex;
       flex-direction: column;
       position: relative;
@@ -1230,17 +1158,6 @@
       width: 44px;
       height: 3px;
       background: var(--gold-deep-accessible);
-      transition: width 0.3s ease;
-    }
-
-    .scard:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-card);
-      border-color: var(--gold-deep-accessible);
-    }
-
-    .scard:hover::before {
-      width: 70px;
     }
 
     .scard-num {
@@ -1635,7 +1552,7 @@
 
     .crm-security-tag {
       font-size: 0.75rem;
-      color: var(--status-online);
+      color: var(--text-light-secondary);
       font-weight: 600;
       display: flex;
       align-items: center;
@@ -1795,13 +1712,6 @@
       display: flex;
       flex-direction: column;
       position: relative;
-      transition: all 0.3s ease;
-    }
-
-    .plan-card:hover {
-      transform: translateY(-5px);
-      border-color: var(--gold-on-dark);
-      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
     }
 
     .plan-card.featured {
@@ -1910,7 +1820,7 @@
       text-transform: uppercase;
       border-radius: var(--radius-sm);
       text-decoration: none;
-      transition: all 0.25s ease;
+      transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
       text-align: center;
     }
 
@@ -1921,7 +1831,6 @@
 
     .plan-btn-action.gold:hover {
       background: #F0DBBC;
-      transform: translateY(-2px);
     }
 
     .plan-btn-action.ghost {
@@ -2106,13 +2015,6 @@
       box-shadow: var(--shadow-card);
       position: relative;
       overflow: hidden;
-      transition: all 0.3s ease;
-    }
-
-    .decision-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow-elevated);
-      border-color: var(--gold-deep-accessible);
     }
 
     .decision-card.featured {
@@ -2276,13 +2178,12 @@
       letter-spacing: 0.06em;
       cursor: pointer;
       border: none;
-      transition: background 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+      transition: background-color 0.2s ease, opacity 0.2s ease;
       white-space: nowrap;
     }
 
     .newsletter-btn:hover:not(:disabled) {
       background: #F0DBBC;
-      transform: translateY(-1px);
     }
 
     .newsletter-btn:disabled {
@@ -2294,7 +2195,7 @@
       font-size: 0.8rem;
       line-height: 1.4;
       min-height: 20px;
-      transition: all 0.25s ease;
+      transition: color 0.2s ease;
     }
 
     .newsletter-feedback.success {
@@ -2346,7 +2247,7 @@
       border: 1px solid rgba(255, 255, 255, 0.16);
       background: rgba(255, 255, 255, 0.04);
       color: var(--text-light-secondary);
-      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
     }
 
     .footer-social-row a svg {
@@ -2355,11 +2256,9 @@
     }
 
     .footer-social-row a:hover {
-      color: #fff;
-      border-color: rgba(225, 29, 46, 0.55);
-      background: rgba(225, 29, 46, 0.12);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 0 16px rgba(225, 29, 46, 0.25);
+      color: var(--gold-on-dark);
+      border-color: var(--border-gold-subtle);
+      background: rgba(197, 168, 128, 0.08);
     }
 
     /* REFINED EXECUTIVE WHATSAPP WIDGET (NO NEON SLOP) */
@@ -2377,13 +2276,11 @@
       padding: 10px 18px 10px 12px;
       border-radius: var(--radius-full);
       box-shadow: 0 12px 35px rgba(0, 0, 0, 0.65), 0 0 15px rgba(197, 168, 128, 0.25);
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: background-color 0.2s ease, opacity 0.2s ease;
       min-height: 52px;
     }
 
     .executive-wa-widget:hover {
-      transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8), 0 0 22px rgba(197, 168, 128, 0.4);
       background: #111D2E;
     }
 
@@ -2424,9 +2321,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background:
-        radial-gradient(560px 300px at 12% 18%, rgba(225, 29, 46, 0.10), transparent 65%),
-        radial-gradient(640px 340px at 88% 82%, rgba(124, 58, 237, 0.12), transparent 65%);
+      background: linear-gradient(0deg, rgba(8, 13, 20, 0.35), transparent 28%);
       pointer-events: none;
       z-index: 1;
     }
@@ -2453,16 +2348,28 @@
 
     /* RESPONSIVE BREAKPOINTS (POLISHED MOBILE UX) */
     @media (max-width: 1024px) {
-      .nav-links {
+      .desktop-nav {
         display: none;
       }
+      .nav-container {
+        gap: 16px;
+      }
+      .nav-cta-btn {
+        margin-left: auto;
+      }
       .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 36px;
+        grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+        gap: 20px;
         text-align: left;
+      }
+      .hero-content {
+        max-width: 760px;
       }
       .hero-visual-col {
         justify-content: center;
+      }
+      .hero-portrait-frame {
+        max-width: 360px;
       }
       .why-grid, .training-grid {
         grid-template-columns: 1fr;
@@ -2470,7 +2377,15 @@
       }
       .ribbon-grid {
         grid-template-columns: 1fr;
-        gap: 24px;
+        gap: 0;
+      }
+      .ribbon-card,
+      .ribbon-card:last-child {
+        border-right: 0;
+        border-bottom: 1px solid var(--border-light);
+      }
+      .ribbon-card:last-child {
+        border-bottom: 0;
       }
       .ribbon-section {
         margin-top: 0;
@@ -2526,33 +2441,41 @@
 
       /* Mobile Hero */
       .hero-section {
-        padding-top: 24px;
-        padding-bottom: 36px;
+        padding-top: 32px;
+        padding-bottom: 42px;
       }
-      .hero-badge-sla {
-        width: 100%;
-        justify-content: center;
-        font-size: 0.68rem;
-        padding: 6px 12px;
-        text-align: center;
-        line-height: 1.4;
+      .hero-grid {
+        grid-template-columns: minmax(0, 1fr) 118px;
+        column-gap: 12px;
+        row-gap: 14px;
+        align-items: end;
+      }
+      .hero-content {
+        display: contents;
       }
       .hero-title {
-        font-size: clamp(2rem, 1.45rem + 2.4vw, 2.7rem);
-        margin-bottom: 16px;
-        line-height: 1.15;
+        grid-column: 1;
+        grid-row: 1;
+        align-self: center;
+        font-size: clamp(1.85rem, 1.5rem + 1.6vw, 2.2rem);
+        margin-bottom: 0;
+        line-height: 1.12;
       }
       .hero-lead {
-        font-size: 0.96rem;
+        grid-column: 1 / -1;
+        grid-row: 2;
+        font-size: 1rem;
         line-height: 1.62;
-        margin-bottom: 26px;
+        margin-bottom: 0;
       }
       .hero-actions {
+        grid-column: 1 / -1;
+        grid-row: 3;
         display: flex;
         flex-direction: column;
         width: 100%;
         gap: 12px;
-        margin-bottom: 28px;
+        margin-bottom: 0;
       }
       .hero-actions a {
         width: 100%;
@@ -2561,38 +2484,42 @@
         min-height: 50px;
       }
       .hero-trust-bar {
-        flex-direction: column;
-        gap: 10px;
+        grid-column: 1 / -1;
+        grid-row: 5;
+        gap: 8px 20px;
         align-items: flex-start;
         padding-top: 18px;
         font-size: 0.78rem;
       }
+      .hero-response {
+        grid-column: 1 / -1;
+        grid-row: 4;
+        margin-bottom: 0;
+      }
 
-      /* Mobile Portrait: Sophisticated Masked Cutout */
+      /* Keep the portrait visible beside the heading on narrow screens. */
       .hero-visual-col {
-        margin-top: 24px;
+        grid-column: 2;
+        grid-row: 1;
+        margin-top: 0;
+        align-self: end;
       }
       .hero-portrait-frame {
-        max-width: 320px;
-        max-height: 380px;
+        width: 118px;
+        max-width: 118px;
+        max-height: 170px;
         overflow: hidden;
-        border-radius: var(--radius-md);
-        -webkit-mask-image: linear-gradient(to bottom, black 72%, transparent 100%);
-        mask-image: linear-gradient(to bottom, black 72%, transparent 100%);
+        border-radius: 0;
+        -webkit-mask-image: none;
+        mask-image: none;
       }
       .hero-portrait-img {
-        max-height: 380px;
-        width: auto;
-        margin: 0 auto;
+        width: 118px;
+        max-height: none;
+        margin: 0;
       }
       .hero-portrait-tag {
-        bottom: 14px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: calc(100% - 28px);
-        padding: 10px 14px;
-        text-align: center;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+        display: none;
       }
       .tag-title {
         font-size: 0.94rem;
@@ -2601,19 +2528,11 @@
         font-size: 0.68rem;
       }
 
-      /* Ribbon Cards Mobile */
+      /* Service index on mobile */
       .ribbon-section {
         margin-top: 0;
         padding-top: 8px;
         padding-bottom: 28px;
-      }
-      .ribbon-card {
-        border-radius: var(--radius-md);
-        overflow: hidden;
-      }
-      .card-media img {
-        height: 185px;
-        object-fit: cover;
       }
       .card-body {
         padding: 22px 20px;
@@ -2843,6 +2762,12 @@
         padding: 0;
         justify-content: center;
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.75), 0 0 16px rgba(37, 211, 102, 0.4);
+        opacity: 0;
+        pointer-events: none;
+      }
+      body.hero-passed .executive-wa-widget {
+        opacity: 1;
+        pointer-events: auto;
       }
       .executive-wa-widget .wa-widget-text {
         display: none;
@@ -2850,13 +2775,41 @@
       /* tastegate: piso mínimo de 12px no mobile + alvos de toque */
       .brand-sub, .tag-sub, .stat-label, .scard-tag, .tf-badge,
       .crm-saas-badge, .panel-tag, .crm-caption, .plan-badge-featured,
-      .hero-badge-sla span, .trust-item span, .kicker, .section-label,
+      .trust-item span, .kicker, .section-label,
       .decision-kicker, .curriculum-pill, .tf-sub, .crm-security-tag span,
       .workflow-note, .workflow-footer-note, .footer-brand-role,
       .footer-locale, .crm-brand-title, .crm-alert, .nav-cta-btn span,
       .wa-widget-label, .wa-widget-sub {
         font-size: 12px !important;
         line-height: 1.5;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .nav-container {
+        gap: 8px;
+        padding-inline: 16px;
+      }
+      .nav-cta-btn {
+        padding: 8px 10px;
+      }
+      .nav-cta-desktop-label {
+        display: none;
+      }
+      .nav-cta-mobile-label {
+        display: inline;
+      }
+      .brand-name {
+        font-size: 1rem;
+      }
+      .brand-sub {
+        max-width: 185px;
+        line-height: 1.35;
+      }
+    }
+    @media (max-width: 350px) {
+      .brand-sub {
+        display: none;
       }
     }
   </style>
@@ -2874,22 +2827,19 @@
         <span class="brand-sub">Perícia · Direito · Tecnologia</span>
       </a>
 
-      <nav aria-label="Navegação Principal">
+      <nav class="desktop-nav" aria-label="Navegação Principal">
         <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#assistencia">Assistência</a></li>
           <li><a href="#pilares">Método</a></li>
+          <li><a href="#assistencia">Assistência</a></li>
           <li><a href="#formacao">Formação</a></li>
           <li><a href="#plataforma">Plataforma</a></li>
-          <li><a href="https://123perito.com.br/planos" target="_blank" rel="noopener noreferrer">Planos ↗</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#contato">Contato</a></li>
+          <li><a href="#faq">Dúvidas</a></li>
         </ul>
       </nav>
 
-      <a href="https://api.whatsapp.com/send/?phone=5534991948659&text=Ol%C3%A1%2C%20Dr.%20Gustavo.%20Sou%20advogado(a)%20e%20preciso%20de%20an%C3%A1lise%20t%C3%A9cnica.%20Prazo%3A__%20Comarca%3A__" target="_blank" rel="noopener noreferrer" class="nav-cta-btn" aria-label="Falar com Dr. Gustavo Brasil no WhatsApp (abre em nova janela)">
+      <a href="https://api.whatsapp.com/send/?phone=5534991948659&text=Ol%C3%A1%2C%20Dr.%20Gustavo.%20Sou%20advogado(a)%20e%20preciso%20de%20an%C3%A1lise%20t%C3%A9cnica.%20Prazo%3A__%20Comarca%3A__" target="_blank" rel="noopener noreferrer" class="nav-cta-btn" aria-label="Solicitar análise pericial no WhatsApp (abre em nova janela)">
         <svg class="wa-icon" width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.155.57 4.177 1.564 5.927l-1.564 5.703 5.841-1.533c1.71.952 3.684 1.503 5.789 1.503 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z"/></svg>
-        <span>WhatsApp</span>
+        <span class="nav-cta-desktop-label">Solicitar análise</span><span class="nav-cta-mobile-label">Contato</span>
       </a>
     </div>
   </header>
@@ -2904,44 +2854,36 @@
 
       <div class="container hero-grid">
         <div class="hero-content">
-          <div class="hero-badge-sla">
-            <span class="status-dot" aria-hidden="true"></span>
-            <span>Resposta em até 4h úteis · OAB/MG · Atuação em todo o Brasil</span>
-          </div>
-
-          <div class="kicker dark-mode">Perito Judicial há 18 anos · 3.000+ Laudos</div>
-
           <h1 id="hero-heading" class="hero-title">
-            O laudo que sustenta a sua <span class="gold-accent">tese em juízo</span>.
+            Prova técnica <span class="gold-accent">para sua tese em juízo.</span>
           </h1>
 
-          <p class="hero-hook">3.000 laudos em 18 anos, com análise de viabilidade em 4h úteis.</p>
-
           <p class="hero-lead">
-            Assistência técnica em grafotécnica, documentoscopia digital, geolocalização, IP e biometria facial. Quesitos precisos, parecer fundamentado e impugnação consistente, para advogados que não podem correr risco com a prova.
+            Assistência técnica pericial para advogados, da formulação de quesitos à impugnação de laudos. Análise de documentos, assinaturas e evidências digitais com método e fundamentação.
           </p>
 
           <div class="hero-actions">
             <a href="https://api.whatsapp.com/send/?phone=5534991948659&text=Ol%C3%A1%2C%20preciso%20de%20assist%C3%AAncia%20t%C3%A9cnica.%20Tipo%3A__%20Prazo%3A__" target="_blank" rel="noopener noreferrer" class="btn-gold" aria-label="Solicitar análise de viabilidade pericial no WhatsApp (abre em nova janela)">
-              Solicitar Análise de Viabilidade Pericial →
+              Solicitar análise do caso →
             </a>
             <a href="#assistencia" class="btn-ghost-dark">
-              Conhecer Especialidades & Metodologia ↓
+              Ver áreas de atuação ↓
             </a>
           </div>
+          <p class="hero-response">Retorno em até 4h úteis, de segunda a sexta, das 9h às 18h.</p>
 
           <div class="hero-trust-bar">
             <div class="trust-item">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Retorno em horário comercial (Seg–Sex 9–18h)</span>
+              <span>18 anos de atuação</span>
             </div>
             <div class="trust-item">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Análise de viabilidade sem compromisso</span>
+              <span>Mais de 3.000 laudos</span>
             </div>
             <div class="trust-item">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>TJMG · TJSP · TRFs · 12 UFs</span>
+              <span>Atuação em todo o Brasil</span>
             </div>
           </div>
         </div>
@@ -2958,52 +2900,35 @@
       </div>
     </section>
 
-    <!-- FLOATING 3-CARD RIBBON (100% BRAZILIAN ARCHITECTURE & NOTARIAL EVIDENCE) -->
-    <section class="ribbon-section" aria-label="Áreas de Ênfase Forense">
+    <!-- EDITORIAL SERVICE INDEX -->
+    <section class="ribbon-section" aria-labelledby="ribbon-heading">
       <div class="container">
+        <h2 id="ribbon-heading" class="sr-only">Áreas de ênfase forense</h2>
         <div class="ribbon-grid">
           
-          <!-- Card 1: Grafotécnica Brasileira -->
           <article class="ribbon-card">
-            <div class="card-media">
-              <img src="assets/card_grafotecnica.webp" alt="Exame pericial grafotécnico em contrato de prestação de serviços com selo notarial de São Paulo sob lupa de precisão" loading="lazy" decoding="async" width="640" height="400">
-              <div class="card-icon-badge" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-              </div>
-            </div>
             <div class="card-body">
+              <span class="card-index" aria-hidden="true">01</span>
               <h3 class="card-title">Grafotécnica & Documentos</h3>
               <p class="card-desc">Exame de punho escritor, detecção de decalques, enxertos e falsificações em contratos físicos e digitais com rigor microscópico.</p>
               <a href="https://api.whatsapp.com/send/?phone=5534991948659&text=Ol%C3%A1%2C%20preciso%20de%20per%C3%ADcia%20grafot%C3%A9cnica.%20Documento%3A__" target="_blank" rel="noopener noreferrer" class="card-action-link" aria-label="Solicitar perícia grafotécnica com Dr. Gustavo Brasil no WhatsApp (abre em nova janela)">Solicitar Perícia Grafotécnica →</a>
             </div>
           </article>
 
-          <!-- Card 2: Palácio da Justiça do Brasil -->
           <article class="ribbon-card">
-            <div class="card-media">
-              <img src="assets/card_tribunal.webp" alt="Fachada monumental do Palácio da Justiça com a bandeira do Brasil e colunas neoclássicas" loading="lazy" decoding="async" width="640" height="400">
-              <div class="card-icon-badge" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-              </div>
-            </div>
             <div class="card-body">
+              <span class="card-index" aria-hidden="true">02</span>
               <h3 class="card-title">Defesa Estratégica</h3>
-              <p class="card-desc">Formulação precisa de quesitos para delimitar o escopo da perícia oficial nos tribunais, blindando a tese e neutralizando armadilhas adversas.</p>
-              <a href="https://api.whatsapp.com/send/?phone=5534991948659&text=Ol%C3%A1%2C%20preciso%20de%20quesitos%20estrat%C3%A9gicos%20para%20meu%20caso.%20Prazo%3A__" target="_blank" rel="noopener noreferrer" class="card-action-link" aria-label="Elaborar quesitos periciais no WhatsApp (abre em nova janela)">Elaborar Quesitos Cirúrgicos →</a>
+              <p class="card-desc">Formulação de quesitos que delimitam o exame pericial e ajudam a esclarecer os pontos técnicos relevantes para o processo.</p>
+              <a href="https://api.whatsapp.com/send/?phone=5534991948659&text=Ol%C3%A1%2C%20preciso%20de%20quesitos%20estrat%C3%A9gicos%20para%20meu%20caso.%20Prazo%3A__" target="_blank" rel="noopener noreferrer" class="card-action-link" aria-label="Elaborar quesitos periciais no WhatsApp (abre em nova janela)">Solicitar quesitos →</a>
             </div>
           </article>
 
-          <!-- Card 3: Lady Justice com Balança Dourada -->
           <article class="ribbon-card">
-            <div class="card-media">
-              <img src="assets/card_justitia.webp" alt="Estátua clássica da Justiça com balança de latão dourado em gabinete jurídico" loading="lazy" decoding="async" width="640" height="400">
-              <div class="card-icon-badge" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18"/><path d="M3 7l9-4 9 4"/><path d="M6 10l-3 6h6l-3-6z"/><path d="M18 10l-3 6h6l-3-6z"/></svg>
-              </div>
-            </div>
             <div class="card-body">
-              <h3 class="card-title">Resultados Concretos</h3>
-              <p class="card-desc">Pareceres e impugnações técnicas fundamentadas nas normas da ABNT e IBAPE, desenvolvidos para sustentar sua tese perante o magistrado.</p>
+              <span class="card-index" aria-hidden="true">03</span>
+              <h3 class="card-title">Pareceres e Impugnações</h3>
+              <p class="card-desc">Exame dos documentos e da metodologia do laudo para apresentar conclusões técnicas fundamentadas ao juízo.</p>
               <a href="https://api.whatsapp.com/send/?phone=5534991948659&text=Ol%C3%A1%2C%20preciso%20de%20impugna%C3%A7%C3%A3o%20de%20laudo%20adverso.%20Prazo%3A__" target="_blank" rel="noopener noreferrer" class="card-action-link" aria-label="Contratar parecer técnico pericial no WhatsApp (abre em nova janela)">Contratar Parecer Técnico →</a>
             </div>
           </article>
@@ -3029,7 +2954,7 @@
               </div>
               <div class="feat-info">
                 <h3>Cadeia de Custódia</h3>
-                <p>Rastreabilidade absoluta, hashes criptográficos e integridade probatória em conformidade com o CPP e CPC.</p>
+                <p>Registro das etapas do exame e verificação da integridade dos arquivos quando aplicável ao caso.</p>
               </div>
             </div>
 
@@ -3038,8 +2963,8 @@
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="12 8 8 12 12 16 16 12 12 8"/></svg>
               </div>
               <div class="feat-info">
-                <h3>Quesitos Cirúrgicos</h3>
-                <p>Elaboração técnica estratégica para vincular o perito do juízo e afastar conjecturas infundadas.</p>
+                <h3>Quesitos Técnicos</h3>
+                <p>Perguntas objetivas para orientar o exame pericial e esclarecer pontos controvertidos.</p>
               </div>
             </div>
 
@@ -3049,7 +2974,7 @@
               </div>
               <div class="feat-info">
                 <h3>Linguagem para o Juiz</h3>
-                <p>Tradução do jargão técnico em fundamentação forense límpida, facilitando a decisão favorável do magistrado.</p>
+                <p>Conclusões técnicas explicadas em linguagem clara para apoiar a análise do juízo.</p>
               </div>
             </div>
 
@@ -3116,7 +3041,6 @@
     <section id="pilares" class="section-pillars" aria-labelledby="pillars-heading">
       <div class="container">
         <div class="pillars-header">
-          <div class="kicker light-mode">Experiência a serviço da sua causa</div>
           <h2 id="pillars-heading">Estratégia. Método. Resultados.</h2>
           <p class="why-lead">Combinamos 18 anos de vivência forense, perícia digital contemporânea e estratégia processual de alto nível.</p>
         </div>
@@ -3155,7 +3079,7 @@
         <div class="services-top-bar">
           <div>
             <div class="section-label">Assistência técnica especializada</div>
-            <h2 id="services-heading">Quesitos cirúrgicos, parecer que se sustenta.</h2>
+            <h2 id="services-heading">Quesitos claros. Pareceres técnicos.</h2>
           </div>
           <a href="https://api.whatsapp.com/send/?phone=5534991948659&text=Ol%C3%A1%2C%20sou%20ADVOGADO%20e%20preciso%20de%20assistencia.%20Prazo%3A__" target="_blank" rel="noopener noreferrer" class="btn-gold" aria-label="Solicitar análise de viabilidade técnica no WhatsApp (abre em nova janela)">
             Solicitar análise de viabilidade →
@@ -3203,7 +3127,6 @@
         <div class="workflow-box">
           <div class="workflow-head">
             <div>
-              <div class="section-label on-dark">Jornada transparente</div>
               <h3>Como funciona a atuação pericial</h3>
             </div>
             <span class="workflow-note">Verificação de conflito de interesses em todos os casos.</span>
@@ -3219,7 +3142,7 @@
             <div class="wf-step">
               <div class="wf-num">02 <span class="wf-num-arrow" aria-hidden="true">→</span></div>
               <div class="wf-title">Quesitos e tese técnica</div>
-              <div class="wf-desc">Redação cirúrgica dos quesitos para vincular o perito judicial às balizas do direito probatório.</div>
+              <div class="wf-desc">Redação de quesitos claros sobre os pontos técnicos em discussão no processo.</div>
             </div>
 
             <div class="wf-step">
@@ -3251,7 +3174,6 @@
     <section id="formacao" class="section-training" aria-labelledby="training-heading">
       <div class="container training-grid">
         <div class="training-content">
-          <div class="section-label">Formação profissional</div>
           <h2 id="training-heading">Formação 123 Perito: da técnica à nomeação.</h2>
           <p class="why-lead">
             Para quem parte do zero ou busca recorrência de honorários: técnica pericial, precificação e prospecção de bancas e varas.
@@ -3329,10 +3251,7 @@
               <span class="crm-saas-badge">SaaS Forense</span>
               <span class="crm-brand-title">123 Perito OS · Módulo Gestão Judicial</span>
             </div>
-            <div class="crm-security-tag">
-              <span class="status-dot" aria-hidden="true"></span>
-              <span>Conexão Criptografada 256-bit</span>
-            </div>
+            <div class="crm-security-tag">Prévia ilustrativa · dados de exemplo</div>
           </div>
 
           <div class="crm-body-grid">
@@ -3355,8 +3274,8 @@
                 <span>Em Andamento</span>
                 <strong class="crm-funnel-value">3</strong>
               </div>
-              <div class="crm-stat-highlight">R$ 48.720,00</div>
-              <span class="crm-caption">Faturamento em carteira no mês vigente.</span>
+              <div class="crm-stat-highlight">R$ —</div>
+              <span class="crm-caption">Honorários registrados pelo usuário.</span>
             </div>
 
             <!-- Panel 2: Agenda de Diligências -->
@@ -3649,7 +3568,6 @@
     <section class="section-decision" aria-labelledby="decision-heading">
       <div class="container">
         <div class="decision-header">
-          <div class="section-label">Próximo passo</div>
           <h2 id="decision-heading">Escolha como deseja avançar</h2>
           <p class="why-lead">Atendimento sob medida para advogados que precisam de perícia imediata ou para quem deseja construir autoridade na área.</p>
         </div>
@@ -3661,7 +3579,7 @@
             <span class="decision-kicker">Para advogados e departamentos jurídicos</span>
             <h3 class="decision-title">Tenho Caso Urgente</h3>
             <p class="decision-desc">
-              Análise imediata de viabilidade técnica para o seu processo. Envie seu documento para triagem prévia sem compromisso e garanta quesitos ou impugnação dentro do prazo judicial fatal.
+              Envie os documentos e informe o prazo do processo para uma análise inicial de viabilidade técnica e disponibilidade.
             </p>
             <a href="https://api.whatsapp.com/send/?phone=5534991948659&text=Sou%20ADVOGADO%2C%20caso%20urgente.%20Prazo%3A__" target="_blank" rel="noopener noreferrer" class="btn-gold" aria-label="Solicitar análise de viabilidade processual para caso urgente no WhatsApp (abre em nova janela)">
               Solicitar Análise de Viabilidade Processual →
@@ -3734,13 +3652,13 @@
         <div class="footer-col">
           <h5>Notas Técnicas</h5>
           <p class="footer-note">
-            Análises exclusivas de jurisprudência pericial e casos práticos, sem spam.
+            Solicite por e-mail informações sobre notas técnicas e atualizações da área pericial.
           </p>
           <form id="newsletter-form" class="newsletter-form" novalidate>
-            <label for="newsletter-email" class="sr-only">Seu e-mail profissional para receber informativos técnicos</label>
+            <label for="newsletter-email" class="sr-only">Seu e-mail para solicitar notas técnicas</label>
             <div class="newsletter-input-group">
               <input type="email" id="newsletter-email" name="email" required placeholder="Seu e-mail profissional" class="newsletter-input" autocomplete="email" aria-describedby="newsletter-feedback">
-              <button type="submit" id="newsletter-submit-btn" class="newsletter-btn">Receber Notas</button>
+              <button type="submit" id="newsletter-submit-btn" class="newsletter-btn">Solicitar por e-mail</button>
             </div>
             <div id="newsletter-feedback" class="newsletter-feedback" role="status" aria-live="polite"></div>
           </form>
@@ -3759,11 +3677,9 @@
           © 2026 Gustavo Brasil · 123 Perito. Todos os direitos reservados. Informativo pericial e jurídico sujeito à análise prévia de viabilidade técnica e verificação de conflito de interesses.
         </div>
 
-        <div class="footer-social-row" aria-label="Redes sociais">
+        <div class="footer-social-row" aria-label="Canais de contato">
           <a href="https://api.whatsapp.com/send/?phone=5534991948659&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp (abre em nova janela)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.155.57 4.177 1.564 5.927l-1.564 5.703 5.841-1.533c1.71.952 3.684 1.503 5.789 1.503 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z"/></svg></a>
           <a href="https://www.instagram.com/peritobrasil" target="_blank" rel="noopener noreferrer" aria-label="Instagram @peritobrasil (abre em nova janela)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-          <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube (abre em nova janela)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-1.92 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
-          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (abre em nova janela)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
           <a href="mailto:contato@advgustavobrasil.com.br" aria-label="Enviar e-mail para contato@advgustavobrasil.com.br"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
         </div>
       </div>
@@ -3781,13 +3697,49 @@
     </div>
   </a>
 
-  <!-- GSAP 3 & SCROLLTRIGGER SCRIPTS (SYNC BEFORE INLINE EXECUTION) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- Defer preserves parsing; DOMContentLoaded runs after these scripts when available. -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
   <!-- ACCORDION & GSAP INTERACTIVITY SCRIPT -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      const hero = document.querySelector('.hero-section');
+      if (hero && 'IntersectionObserver' in window) {
+        const heroObserver = new IntersectionObserver(entries => {
+          document.body.classList.toggle('hero-passed', !entries[0].isIntersecting && window.scrollY > hero.offsetTop);
+        });
+        heroObserver.observe(hero);
+      }
+
+      const desktopNavLinks = [...document.querySelectorAll('.nav-links a[href^="#"]')];
+      let navUpdatePending = false;
+      const updateDesktopNav = () => {
+        const header = document.querySelector('.site-header');
+        if (header) header.classList.toggle('scrolled', window.scrollY > 24);
+        const readingLine = (header ? header.offsetHeight : 84) + 80;
+        let current = null;
+        desktopNavLinks.forEach(link => {
+          const section = document.querySelector(link.getAttribute('href'));
+          if (section && section.getBoundingClientRect().top <= readingLine) current = link;
+        });
+        const footer = document.getElementById('contato');
+        if (footer && footer.getBoundingClientRect().top <= readingLine) current = null;
+        desktopNavLinks.forEach(link => {
+          if (link === current) link.setAttribute('aria-current', 'location');
+          else link.removeAttribute('aria-current');
+        });
+        navUpdatePending = false;
+      };
+      const scheduleNavUpdate = () => {
+        if (navUpdatePending) return;
+        navUpdatePending = true;
+        requestAnimationFrame(updateDesktopNav);
+      };
+      window.addEventListener('scroll', scheduleNavUpdate, { passive: true });
+      window.addEventListener('resize', scheduleNavUpdate);
+      updateDesktopNav();
+
       // 1. ACCORDION LOGIC
       const faqButtons = document.querySelectorAll('.faq-question-btn');
       faqButtons.forEach(btn => {
@@ -3819,402 +3771,69 @@
       const newsletterForm = document.getElementById('newsletter-form');
       const newsletterFeedback = document.getElementById('newsletter-feedback');
       const newsletterInput = document.getElementById('newsletter-email');
-      const newsletterBtn = document.getElementById('newsletter-submit-btn');
 
-      if (newsletterForm && newsletterFeedback && newsletterInput && newsletterBtn) {
+      if (newsletterForm && newsletterFeedback && newsletterInput) {
         newsletterForm.addEventListener('submit', (e) => {
           e.preventDefault();
           const email = newsletterInput.value.trim();
-          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-          if (!email || !emailRegex.test(email)) {
+          if (!newsletterInput.checkValidity()) {
             newsletterFeedback.className = 'newsletter-feedback error';
-            newsletterFeedback.innerHTML = '<span>⚠️</span> Informe um e-mail corporativo válido.';
+            newsletterFeedback.textContent = 'Informe um e-mail válido para preparar a solicitação.';
             newsletterInput.setAttribute('aria-invalid', 'true');
             newsletterInput.focus();
             return;
           }
 
           newsletterInput.setAttribute('aria-invalid', 'false');
-          newsletterBtn.disabled = true;
-          const originalText = newsletterBtn.textContent;
-          newsletterBtn.textContent = 'Enviando...';
-          newsletterFeedback.className = 'newsletter-feedback loading';
-          newsletterFeedback.innerHTML = '<span aria-hidden="true">...</span> Processando inscrição...';
-
-          setTimeout(() => {
-            newsletterFeedback.className = 'newsletter-feedback success';
-            newsletterFeedback.innerHTML = 'Inscrição confirmada! Você receberá os informativos.';
-            newsletterForm.reset();
-            newsletterBtn.disabled = false;
-            newsletterBtn.textContent = originalText;
-          }, 500);
+          const subject = encodeURIComponent('Solicitação de notas técnicas');
+          const body = encodeURIComponent('Olá, gostaria de receber informações sobre as notas técnicas.\n\nMeu e-mail: ' + email);
+          newsletterFeedback.className = 'newsletter-feedback';
+          newsletterFeedback.textContent = 'Seu aplicativo de e-mail será aberto. Envie a mensagem para concluir a solicitação.';
+          window.location.href = 'mailto:contato@advgustavobrasil.com.br?subject=' + subject + '&body=' + body;
+        });
+        newsletterInput.addEventListener('input', () => {
+          newsletterInput.removeAttribute('aria-invalid');
+          newsletterFeedback.textContent = '';
+          newsletterFeedback.className = 'newsletter-feedback';
         });
       }
 
-      // 3. COUNTER HELPER FUNCTION (respeita prefers-reduced-motion)
+      // A página já exibe os dados finais; o movimento não altera seu conteúdo.
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      function animateCount(elem, start, end, duration, suffix = '', formatThousands = false) {
-        if (prefersReducedMotion) {
-          const finalFormatted = formatThousands ? end.toLocaleString('pt-BR') : end;
-          elem.textContent = finalFormatted + suffix;
-          return;
-        }
-        let startTime = null;
-        function step(timestamp) {
-          if (!startTime) startTime = timestamp;
-          const progress = Math.min((timestamp - startTime) / duration, 1);
-          // Ease out expo
-          const easeProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
-          const current = Math.floor(easeProgress * (end - start) + start);
-          const formatted = formatThousands ? current.toLocaleString('pt-BR') : current;
-          elem.textContent = formatted + suffix;
-          if (progress < 1) {
-            window.requestAnimationFrame(step);
-          } else {
-            const finalFormatted = formatThousands ? end.toLocaleString('pt-BR') : end;
-            elem.textContent = finalFormatted + suffix;
-          }
-        }
-        window.requestAnimationFrame(step);
-      }
+      if (!prefersReducedMotion && typeof window.gsap !== 'undefined') {
+        // Um único momento de chegada mantém foto, título e CTAs visíveis desde o HTML.
+        gsap.fromTo('.hero-portrait-img',
+          { x: 14, filter: 'brightness(0.88)' },
+          { x: 0, filter: 'brightness(1)', duration: 0.7, ease: 'expo.out', clearProps: 'transform,filter' }
+        );
+        gsap.fromTo('.hero-title .gold-accent',
+          { color: '#C5A880' },
+          { color: '#DFC5A2', duration: 0.55, ease: 'power2.out', clearProps: 'color' }
+        );
 
-      // 3. GSAP ANIMATIONS ORCHESTRATION
-      function runGSAP() {
-        if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
-          console.warn('GSAP or ScrollTrigger not available yet, retrying...');
-          return false;
-        }
-
-        gsap.registerPlugin(ScrollTrigger);
-
-        // Header scrolled class toggle on scroll
-        ScrollTrigger.create({
-          start: 'top -50',
-          end: 999999,
-          toggleClass: { className: 'scrolled', targets: '.site-header' }
-        });
-
-        // Hero Entrance Timeline
-        const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-        heroTl
-          .from('.hero-badge-sla', { y: -16, opacity: 0, duration: 0.7 })
-          .from('.hero-content .kicker', { y: 20, opacity: 0, duration: 0.65 }, '-=0.4')
-          .from('#hero-heading', { y: 28, opacity: 0, duration: 0.85 }, '-=0.45')
-          .from('.hero-lead', { y: 20, opacity: 0, duration: 0.75 }, '-=0.45')
-          .from('.hero-actions', { y: 20, opacity: 0, duration: 0.7 }, '-=0.45')
-          .from('.hero-trust-bar .trust-item', { y: 14, opacity: 0, stagger: 0.08, duration: 0.55 }, '-=0.35')
-          .from('.hero-portrait-frame', { scale: 0.94, y: 30, opacity: 0, duration: 1.1 }, '-=0.7');
-
-        // Floating 3-Cards Ribbon (Staggered Entrance)
-        const ribbonCards = document.querySelectorAll('.ribbon-card');
-        if (ribbonCards.length > 0) {
-          gsap.from(ribbonCards, {
-            scrollTrigger: {
-              trigger: '.ribbon-section',
-              start: 'top 88%',
-              toggleActions: 'play none none none'
-            },
-            immediateRender: false,
-            y: 45,
-            opacity: 0,
-            duration: 0.85,
-            stagger: 0.15,
-            ease: 'power2.out'
-          });
-        }
-
-        // Section Why: Content & Mosaic
-        const whyContent = document.querySelector('.why-content');
-        if (whyContent) {
-          gsap.from(whyContent, {
-            scrollTrigger: {
-              trigger: '.section-why',
-              start: 'top 85%',
-              toggleActions: 'play none none none'
-            },
-            immediateRender: false,
-            x: -35,
-            opacity: 0,
-            duration: 0.85,
-            ease: 'power3.out'
-          });
-        }
-
-        const featCards = document.querySelectorAll('.feat-card');
-        if (featCards.length > 0) {
-          gsap.from(featCards, {
-            scrollTrigger: {
-              trigger: '.why-features-grid',
-              start: 'top 88%',
-              toggleActions: 'play none none none'
-            },
-            immediateRender: false,
-            y: 25,
-            opacity: 0,
-            stagger: 0.1,
-            duration: 0.7,
-            ease: 'power2.out'
-          });
-        }
-
-        const mosaicImg = document.querySelector('.mosaic-main-img');
-        if (mosaicImg) {
-          gsap.from(mosaicImg, {
-            scrollTrigger: {
-              trigger: '.why-mosaic-col',
-              start: 'top 85%',
-              toggleActions: 'play none none none'
-            },
-            immediateRender: false,
-            scale: 0.95,
-            opacity: 0,
-            duration: 0.95,
-            ease: 'power3.out'
-          });
-        }
-
-        const quoteBox = document.querySelector('.mosaic-quote-box');
-        if (quoteBox) {
-          gsap.from(quoteBox, {
-            scrollTrigger: {
-              trigger: '.mosaic-quote-box',
-              start: 'top 92%',
-              toggleActions: 'play none none none'
-            },
-            immediateRender: false,
-            x: 30,
-            opacity: 0,
-            duration: 0.8,
-            delay: 0.2,
-            ease: 'power2.out'
-          });
-        }
-
-        // Numbers Counter Animation
-        const statItems = document.querySelectorAll('.stats-bar-section .stat-number');
-        if (statItems.length >= 4) {
-          ScrollTrigger.create({
-            trigger: '.stats-bar-section',
-            start: 'top 88%',
-            once: true,
-            onEnter: () => {
-              animateCount(statItems[0], 0, 18, 1200, '+');
-              animateCount(statItems[1], 0, 3000, 1600, '+', true);
-              animateCount(statItems[2], 0, 1000, 1500, '+', true);
-              gsap.from(statItems[3], { scale: 0.4, opacity: 0, duration: 0.7, ease: 'back.out(2)' });
-            }
-          });
-        }
-
-        // 3 Pillars
-        const pillars = document.querySelectorAll('.pillar-card');
-        if (pillars.length > 0) {
-          gsap.from(pillars, {
-            scrollTrigger: {
-              trigger: '.pillars-grid',
-              start: 'top 88%',
-              toggleActions: 'play none none none'
-            },
-            immediateRender: false,
-            y: 40,
-            opacity: 0,
-            duration: 0.8,
-            stagger: 0.14,
-            ease: 'power2.out'
-          });
-        }
-
-        // 5 Specialized Service Cards
-        const serviceCards = document.querySelectorAll('.scard');
-        if (serviceCards.length > 0) {
-          gsap.from(serviceCards, {
-            scrollTrigger: {
-              trigger: '.service-cards-5',
-              start: 'top 88%',
-              toggleActions: 'play none none none'
-            },
-            immediateRender: false,
-            y: 35,
-            opacity: 0,
-            duration: 0.75,
-            stagger: 0.09,
-            ease: 'power2.out'
-          });
-        }
-
-        // Workflow 4 Steps
-        const wfSteps = document.querySelectorAll('.wf-step');
-        if (wfSteps.length > 0) {
-          gsap.from(wfSteps, {
-            scrollTrigger: {
+        // A sequência real do trabalho recebe um acento breve ao entrar em vista.
+        if (typeof window.ScrollTrigger !== 'undefined') {
+          gsap.registerPlugin(ScrollTrigger);
+          const stepNumbers = document.querySelectorAll('.workflow-steps-grid .wf-num');
+          if (stepNumbers.length) {
+            ScrollTrigger.create({
               trigger: '.workflow-steps-grid',
-              start: 'top 88%',
-              toggleActions: 'play none none none'
-            },
-            immediateRender: false,
-            y: 28,
-            opacity: 0,
-            duration: 0.7,
-            stagger: 0.1,
-            ease: 'power2.out'
-          });
-        }
-
-        // Formação 123 Perito Pills & Card
-        const curriculumPills = document.querySelectorAll('.curriculum-pill');
-        if (curriculumPills.length > 0) {
-          gsap.from(curriculumPills, {
-            scrollTrigger: {
-              trigger: '.curriculum-pills',
-              start: 'top 88%',
-              toggleActions: 'play none none none'
-            },
-            immediateRender: false,
-            scale: 0.82,
-            opacity: 0,
-            stagger: 0.05,
-            duration: 0.5,
-            ease: 'back.out(1.5)'
-          });
-        }
-
-        const trainingCard = document.querySelector('.training-features-card');
-        if (trainingCard) {
-          gsap.from(trainingCard, {
-            scrollTrigger: {
-              trigger: '.training-features-card',
-              start: 'top 85%',
-              toggleActions: 'play none none none'
-            },
-            immediateRender: false,
-            x: 35,
-            opacity: 0,
-            duration: 0.85,
-            ease: 'power3.out'
-          });
-        }
-
-        // Platform CRM Mockup
-        const crmMockup = document.querySelector('.crm-mockup-frame');
-        if (crmMockup) {
-          gsap.from(crmMockup, {
-            scrollTrigger: {
-              trigger: '.section-platform',
-              start: 'top 80%',
-              toggleActions: 'play none none none'
-            },
-            immediateRender: false,
-            y: 45,
-            opacity: 0,
-            duration: 0.9,
-            ease: 'power3.out'
-          });
-        }
-
-        // Platform Official 3 Plans Cards
-        const planCards = document.querySelectorAll('.plan-card');
-        if (planCards.length > 0) {
-          gsap.from(planCards, {
-            scrollTrigger: {
-              trigger: '.plans-grid',
-              start: 'top 88%',
-              toggleActions: 'play none none none'
-            },
-            immediateRender: false,
-            y: 40,
-            opacity: 0,
-            stagger: 0.14,
-            duration: 0.85,
-            ease: 'power3.out'
-          });
-        }
-
-        const platformCta = document.querySelector('.platform-cta-banner');
-        if (platformCta) {
-          gsap.from(platformCta, {
-            scrollTrigger: {
-              trigger: '.platform-cta-banner',
-              start: 'top 92%',
-              toggleActions: 'play none none none'
-            },
-            immediateRender: false,
-            y: 25,
-            opacity: 0,
-            duration: 0.7,
-            ease: 'power2.out'
-          });
-        }
-
-        // FAQ Items
-        const faqItems = document.querySelectorAll('.faq-item');
-        if (faqItems.length > 0) {
-          gsap.from(faqItems, {
-            scrollTrigger: {
-              trigger: '.faq-accordion-list',
-              start: 'top 88%',
-              toggleActions: 'play none none none'
-            },
-            immediateRender: false,
-            y: 25,
-            opacity: 0,
-            stagger: 0.08,
-            duration: 0.6,
-            ease: 'power2.out'
-          });
-        }
-
-        // Decision Split Cards
-        const decisionCards = document.querySelectorAll('.decision-card');
-        if (decisionCards.length > 0) {
-          gsap.from(decisionCards, {
-            scrollTrigger: {
-              trigger: '.decision-grid',
-              start: 'top 88%',
-              toggleActions: 'play none none none'
-            },
-            immediateRender: false,
-            y: 40,
-            opacity: 0,
-            stagger: 0.18,
-            duration: 0.85,
-            ease: 'power2.out'
-          });
-        }
-
-        // Footer Stagger
-        const footerCols = document.querySelectorAll('.site-footer .footer-col, .site-footer .footer-brand');
-        if (footerCols.length > 0) {
-          gsap.from(footerCols, {
-            scrollTrigger: {
-              trigger: '.site-footer',
-              start: 'top 92%',
-              toggleActions: 'play none none none'
-            },
-            immediateRender: false,
-            y: 25,
-            opacity: 0,
-            stagger: 0.1,
-            duration: 0.7,
-            ease: 'power2.out'
-          });
-        }
-
-        // Refresh triggers on init and window load
-        ScrollTrigger.refresh();
-        window.addEventListener('load', () => ScrollTrigger.refresh());
-        return true;
-      }
-
-      // Safe execution with retry
-      if (!runGSAP()) {
-        let attempts = 0;
-        const interval = setInterval(() => {
-          attempts++;
-          if (runGSAP() || attempts > 25) {
-            clearInterval(interval);
+              start: 'top 82%',
+              once: true,
+              onEnter: () => gsap.fromTo(stepNumbers,
+                { color: '#9D7B4E' },
+                {
+                  color: '#DFC5A2',
+                  duration: 0.45,
+                  stagger: 0.12,
+                  ease: 'power2.out',
+                  clearProps: 'color'
+                }
+              )
+            });
           }
-        }, 120);
+        }
       }
     });
   </script>
